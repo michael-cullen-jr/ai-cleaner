@@ -36,8 +36,8 @@
 <meta property="og:site_name" content="IA Cleaner">
 <meta property="og:image" content="https://iacleaner.com/logo.webp">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="/logo.webp" type="image/webp">
-<link rel="apple-touch-icon" href="/logo.webp">
+<link rel="icon" href="/logo-96.webp" type="image/webp">
+<link rel="apple-touch-icon" href="/logo-264.webp">
 <script>/* Language routing: send Spanish-speaking visitors to /es/ unless they chose English */
 (function(){ if (document.documentElement.lang !== 'en' || location.protocol === 'file:') return;
   try{ var q = new URLSearchParams(location.search).get('lang'), s = localStorage.getItem('iacleaner-lang'),
@@ -47,8 +47,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
 <style>
   :root{
     --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f0f3f7;
@@ -200,7 +198,7 @@
 <body>
 
 <div class="top">
-  <a class="brand" href="/es/"><img src="/logo.webp" alt=""><span>IA <b>Cleaner</b></span></a>
+  <a class="brand" href="/es/"><img src="/logo-96.webp" width="38" height="38" alt=""><span>IA <b>Cleaner</b></span></a>
   <div class="top-right">
     <span data-i18n="nav.guides"><a class="link" href="/es/guias/">Guías</a></span>
     <a class="link" href="#how" data-i18n="nav.how">Cómo funciona</a>
@@ -209,7 +207,7 @@
 </div>
 
 <section class="hero">
-  <img class="logo" src="/logo.webp" alt="IA Cleaner logo">
+  <img class="logo" src="/logo-264.webp" width="132" height="132" alt="IA Cleaner logo">
   <h1 data-i18n="hero.title">Limpia los <em>rastros de IA</em><br>de tus archivos</h1>
   <p data-i18n="hero.sub">Elimina los metadatos ocultos y los caracteres invisibles que vinculan tus textos, imágenes y documentos con herramientas de IA.</p>
   <div class="pill">
@@ -327,7 +325,7 @@
   </section>
 </main>
 
-<footer><img src="/logo.webp" alt=""><span data-i18n="footer">IA Cleaner · Privado por diseño: tus archivos nunca salen de tu dispositivo.</span></footer>
+<footer><img src="/logo-96.webp" width="22" height="22" alt=""><span data-i18n="footer">IA Cleaner · Privado por diseño: tus archivos nunca salen de tu dispositivo.</span></footer>
 
 <script>
 /* =====================================================================
@@ -475,6 +473,18 @@ function setLang(l){
 }
 // Remember an explicit language choice (the link itself navigates)
 document.addEventListener('click', e => { const a = e.target.closest('.lang a'); if (a){ try{ localStorage.setItem('iacleaner-lang', a.dataset.lang); }catch{} } });
+
+/* Heavy libraries (PDF / Office) load only when a document needs them */
+const LIBS = {JSZip: 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js', PDFLib: 'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js'};
+const libLoads = {};
+function needLib(name){
+  if (window[name]) return Promise.resolve();
+  return libLoads[name] || (libLoads[name] = new Promise((ok, fail) => {
+    const s = document.createElement('script'); s.src = LIBS[name]; s.async = true;
+    s.onload = ok; s.onerror = () => { delete libLoads[name]; s.remove(); fail(new Error(name)); };
+    document.head.appendChild(s);
+  }));
+}
 
 /* =====================================================================
    Utilities
@@ -919,6 +929,7 @@ function xmlFields(x){
 }
 
 async function cleanZipDoc(u8, ext, opts){
+  await needLib('JSZip').catch(() => {});
   if (!window.JSZip) throw new Error(tr('Could not load the JSZip library (are you offline?)'));
   const zip = await JSZip.loadAsync(u8);
   const removed = [];
@@ -1003,6 +1014,7 @@ async function cleanZipDoc(u8, ext, opts){
 }
 
 async function cleanPDF(u8){
+  await needLib('PDFLib').catch(() => {});
   if (!window.PDFLib) throw new Error(tr('Could not load the pdf-lib library (are you offline?)'));
   const {PDFDocument, PDFName, PDFRef, PDFArray, PDFDict} = PDFLib;
   let pdf;
@@ -1150,6 +1162,7 @@ fileIn.onchange = () => { [...fileIn.files].forEach(processFile); fileIn.value =
 ['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
 drop.addEventListener('drop', e => [...e.dataTransfer.files].forEach(processFile));
 $('#dlAll').onclick = async () => {
+  await needLib('JSZip');
   const z = new JSZip(); const used = new Set();
   for (const r of results){ let n = r.name, i = 1; while (used.has(n)) n = r.name.replace(/(\.[^.]+)?$/, `-${i++}$1`); used.add(n); z.file(n, r.blob, {date: FIXED_DATE}); }
   download(await z.generateAsync({type:'blob'}), tr('ia-cleaner-files.zip'));
@@ -1174,6 +1187,7 @@ function setMode(mode){
   fileIn.accept = m.accept;
   document.querySelectorAll('[data-for]').forEach(el => el.hidden = el.dataset.for !== mode);
   $('#fileOpts').hidden = mode === 'video';
+  if (mode === 'documents'){ needLib('JSZip').catch(() => {}); needLib('PDFLib').catch(() => {}); }
 }
 function openTab(t, push){
   document.querySelectorAll('.seg button').forEach(x => x.setAttribute('aria-selected', x === t));

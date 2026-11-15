@@ -72,8 +72,8 @@ GUIDES = [
   'es': {
    'slug': 'etiqueta-ia-instagram',
    'title': 'Por qué Instagram pone «Información de IA» en tu foto y cómo quitar los metadatos que la activan',
-   'seo_title': '¿Instagram pone «Información de IA» en tu foto? Por qué pasa y cómo quitar los metadatos',
-   'desc': 'Instagram y Facebook leen los metadatos C2PA e IPTC para poner la etiqueta «Información de IA», incluso en fotos reales con pequeños retoques con IA. Así puedes revisar y limpiar tu imagen antes de publicarla.',
+   'seo_title': 'Etiqueta «Información de IA» en Instagram: por qué sale y cómo quitarla',
+   'desc': '¿Instagram marca tu foto con «Información de IA»? Suele deberse a metadatos C2PA o IPTC. Compruébalo y límpialos gratis en tu navegador, sin subir la foto. Guía paso a paso.',
    'lead': '¿Has subido una foto real e Instagram la ha marcado con «Información de IA»? Normalmente no son los píxeles: son los metadatos que tu app de edición escribió en el archivo. Te explicamos cómo funciona y cómo limpiarlo.',
    'cta': 'images', 'mins': 5,
    'body': '''
@@ -157,8 +157,8 @@ GUIDES = [
   'es': {
    'slug': 'etiqueta-ia-tiktok',
    'title': 'Por qué TikTok marca tu foto o vídeo como «Generado por IA» y cómo quitar los metadatos que lo activan',
-   'seo_title': '¿TikTok pone «Generado por IA» en tu foto o vídeo? Por qué pasa y cómo quitarlo',
-   'desc': 'TikTok lee las Content Credentials (C2PA) de las fotos y vídeos que subes para añadir automáticamente la etiqueta «Generado por IA». Así puedes revisar tus imágenes (JPG, PNG) y vídeos (MP4, MOV) y limpiarlos antes de publicarlos.',
+   'seo_title': 'Etiqueta «Generado por IA» en TikTok: por qué sale y cómo quitarla',
+   'desc': '¿TikTok marca tu foto o vídeo como «Generado por IA»? Suele deberse a metadatos C2PA. Compruébalo y límpialos gratis, sin perder calidad y sin subir el archivo.',
    'lead': '¿Has subido una foto, un carrusel o un vídeo y TikTok lo ha marcado como «Generado por IA» aunque solo usaste la IA para una parte pequeña? Muchas veces la etiqueta la activan los metadatos del archivo. Te explicamos cómo funciona y cómo limpiarlo.',
    'cta': 'images', 'mins': 5,
    'body': '''
@@ -246,8 +246,8 @@ GUIDES = [
   'es': {
    'slug': 'quitar-c2pa-content-credentials',
    'title': 'Cómo quitar C2PA / Content Credentials de una imagen',
-   'seo_title': 'Cómo quitar C2PA y Content Credentials de una imagen (gratis)',
-   'desc': 'Qué son las Content Credentials (C2PA), cómo saber si tu imagen las tiene y cómo eliminarlas gratis sin perder calidad.',
+   'seo_title': 'Quitar C2PA y Content Credentials de una imagen gratis y sin perder calidad',
+   'desc': 'Comprueba si tu imagen lleva Content Credentials (C2PA) de ChatGPT, Firefly u otras IA y elimínalas gratis en tu navegador. Sin registro, sin subir la imagen y sin perder calidad.',
    'lead': 'Las imágenes creadas o editadas con herramientas de IA suelen llevar un registro oculto y firmado de cómo se hicieron. Te explicamos qué es, cómo detectarlo y cómo quitarlo.',
    'cta': 'images', 'mins': 4,
    'body': '''
@@ -329,8 +329,8 @@ GUIDES = [
   'es': {
    'slug': 'caracteres-ocultos-chatgpt',
    'title': 'Caracteres ocultos de ChatGPT: qué son y cómo eliminarlos',
-   'seo_title': 'Caracteres ocultos de ChatGPT, oaicite y utm_source: cómo quitarlos',
-   'desc': 'Por qué el texto copiado de ChatGPT puede tener caracteres invisibles, marcas contentReference[oaicite] y enlaces con utm_source=chatgpt.com, y cómo limpiarlo.',
+   'seo_title': 'Caracteres ocultos de ChatGPT: cómo detectarlos y quitarlos gratis',
+   'desc': '¿Tu texto de ChatGPT lleva caracteres invisibles, marcas oaicite o enlaces utm_source=chatgpt.com? Pégalo, míralos marcados al instante y límpialo gratis, sin subir nada.',
    'lead': '¿Has pegado un texto de un chat de IA y te han aparecido huecos raros, códigos «oaicite» o etiquetas en los enlaces? Te explicamos de dónde salen y cómo limpiarlos con un clic.',
    'cta': 'text', 'mins': 5,
    'body': '''
@@ -432,8 +432,8 @@ GUIDES = [
   'es': {
    'slug': 'quitar-rastros-ia-documentos-correos',
    'title': 'Cómo quitar los rastros de IA de documentos y correos que has pulido con ChatGPT o Copilot',
-   'seo_title': 'Quitar rastros de ChatGPT y Copilot de documentos y correos (guía de metadatos)',
-   'desc': 'Los Word, PDF y correos que has pulido con IA pueden llevar metadatos, imágenes de IA incrustadas, caracteres ocultos y enlaces de chatgpt.com. Mira qué contienen y límpialos antes de enviarlos.',
+   'seo_title': 'Quitar rastros de ChatGPT de Word, PDF y correos (metadatos)',
+   'desc': 'Los Word, PDF y correos que has pulido con IA pueden llevar metadatos, imágenes de IA y caracteres ocultos. Mira qué contienen y límpialos gratis antes de enviarlos.',
    'lead': 'Has usado ChatGPT o Copilot para pulir un informe, una carta de presentación o un correo. Antes de enviarlo, revisa los rastros técnicos que lleva el archivo: pueden decir más que el propio texto.',
    'cta': 'documents', 'mins': 6,
    'body': '''
@@ -533,8 +533,8 @@ GUIDES = [
   'es': {
    'slug': 'borrar-metadatos-pdf',
    'title': 'Cómo borrar los metadatos de un PDF',
-   'seo_title': 'Cómo borrar los metadatos de un PDF (autor, creador, XMP) gratis',
-   'desc': 'Descubre qué metadatos tiene un PDF (autor, aplicación, fechas, XMP) y elimínalos gratis, sin Acrobat y sin subir el archivo.',
+   'seo_title': 'Borrar metadatos de un PDF gratis (autor, creador, XMP) sin Acrobat',
+   'desc': 'Mira qué metadatos tiene tu PDF (autor, programa, fechas, XMP) y bórralos gratis en tu navegador: sin Acrobat, sin registro y sin subir el archivo.',
    'lead': 'Todo PDF lleva información sobre quién lo hizo y con qué programa. Te contamos qué contiene, por qué importa y cómo eliminarla sin subir tu archivo a ningún sitio.',
    'cta': 'documents', 'mins': 4,
    'body': '''
@@ -630,14 +630,14 @@ def page(lang, url, alt, title, desc, body, ld):
 <meta property="og:url" content="{SITE}{url}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:locale" content="{t['locale']}"><meta property="og:image" content="{SITE}/logo.webp"><meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#3f5a7d">
-<link rel="icon" href="/logo.webp" type="image/webp">
+<link rel="icon" href="/logo-96.webp" type="image/webp">
 {FONT}
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>{CSS}</style>
 </head>
 <body>
 <div class="top">
-  <a class="brand" href="{t['home']}"><img src="/logo.webp" alt=""><span>IA <b>Cleaner</b></span></a>
+  <a class="brand" href="{t['home']}"><img src="/logo-96.webp" width="38" height="38" alt=""><span>IA <b>Cleaner</b></span></a>
   <div class="top-right">
     <a href="{t['guides']}">{t['guides_name']}</a>
     <nav class="lang" aria-label="Language"><a href="{alt['en']}" hreflang="en" lang="en" data-lang="en"{' aria-current="page"' if lang == 'en' else ''}>EN</a><a href="{alt['es']}" hreflang="es" lang="es" data-lang="es"{' aria-current="page"' if lang == 'es' else ''}>ES</a></nav>
@@ -657,7 +657,7 @@ def page(lang, url, alt, title, desc, body, ld):
 def cta(lang, kind):
     t = T[lang]
     href = t['home'] + ('#' + kind if kind in ('images', 'video', 'documents') else '')
-    return (f'<div class="cta"><img src="/logo.webp" alt=""><div><strong>{t["cta_title"]}</strong><span>{t["cta_text"]}</span></div>'
+    return (f'<div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>{t["cta_title"]}</strong><span>{t["cta_text"]}</span></div>'
             f'<a class="btn" href="{href}">{t["open"]}</a></div>')
 
 def url_of(lang, g):
