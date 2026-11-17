@@ -167,6 +167,10 @@
   .note{color:var(--muted);font-size:13px;margin:10px 0 0}
   .note.warn{color:var(--warn)}
   .callout{display:flex;gap:10px;align-items:flex-start;background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px}
+  .reveal{margin-top:12px;background:var(--brand-soft);border-radius:12px;padding:12px 14px;font-size:13.5px}
+  .reveal>strong{display:block;margin-bottom:4px;color:var(--ink)}
+  .reveal .items{margin:4px 0 6px}
+  .reveal-note{color:var(--ok);font-weight:600;font-size:13px}
   .callout.bad{background:var(--bad-soft);color:var(--bad);font-family:ui-monospace,Consolas,monospace}
   .dl{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:14px;padding:14px 16px;background:var(--ok-soft);border:1px solid #cfe5db;border-radius:14px}
   .dl-ok{flex:none;width:42px;height:42px;border-radius:50%;background:var(--ok);color:#fff;display:grid;place-items:center;box-shadow:0 4px 12px rgba(63,125,104,.3)}
@@ -291,7 +295,7 @@
     <div class="feat">
       <div class="fi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
       <h4 data-i18n="feat.img.h">Imágenes y vídeo</h4>
-      <p data-i18n="feat.img.p">EXIF, XMP, IPTC, comentarios, C2PA / Content Credentials y prompts incrustados (Stable Diffusion, ComfyUI). Sin pérdida de calidad y conservando el perfil de color. Vídeo MP4/MOV: C2PA, XMP y datos de usuario como la ubicación GPS, sin volver a codificar los fotogramas.</p>
+      <p data-i18n="feat.img.p">EXIF, XMP, IPTC, comentarios, C2PA / Content Credentials y prompts incrustados (Stable Diffusion, ComfyUI). Sin pérdida de calidad y conservando el perfil de color. Muestra lo que revelan las Content Credentials (herramienta, autor, historial de ediciones) antes de quitarlas. Vídeo MP4/MOV: C2PA, XMP y datos de usuario como la ubicación GPS, sin volver a codificar los fotogramas.</p>
     </div>
     <div class="feat">
       <div class="fi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
@@ -312,7 +316,7 @@
   <div class="limits" data-i18n="limits"><b>Lo que no puede eliminar:</b> marcas de agua invisibles incrustadas en los propios píxeles o en el patrón estadístico de las palabras (p. ej. SynthID). Eso no son metadatos: forma parte del contenido.</div>
   <section class="guides" id="guides">
     <h2 data-i18n="guides.title">Guías</h2>
-    <div class="guide-cards" data-i18n="guides.list"><a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a></div>
+    <div class="guide-cards" data-i18n="guides.list"><a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a></div>
   </section>
   <section class="faq" id="faq">
     <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
@@ -353,7 +357,7 @@ const UI_ES = {
   'bulk.clear': 'Vaciar lista',
   'bulk.all': 'Descargar todo (.zip)',
   'feat.img.h': 'Imágenes y vídeo',
-  'feat.img.p': 'EXIF, XMP, IPTC, comentarios, C2PA / Content Credentials y prompts incrustados (Stable Diffusion, ComfyUI). Sin pérdida de calidad y conservando el perfil de color. Vídeo MP4/MOV: C2PA, XMP y datos de usuario como la ubicación GPS, sin volver a codificar los fotogramas.',
+  'feat.img.p': 'EXIF, XMP, IPTC, comentarios, C2PA / Content Credentials y prompts incrustados (Stable Diffusion, ComfyUI). Sin pérdida de calidad y conservando el perfil de color. Muestra lo que revelan las Content Credentials (herramienta, autor, historial de ediciones) antes de quitarlas. Vídeo MP4/MOV: C2PA, XMP y datos de usuario como la ubicación GPS, sin volver a codificar los fotogramas.',
   'feat.doc.h': 'Documentos',
   'feat.doc.p': 'Autor, empresa, aplicación generadora, plantilla y propiedades personalizadas de archivos Office y OpenDocument, además de sus imágenes incrustadas.',
   'feat.pdf.h': 'PDF',
@@ -364,7 +368,7 @@ const UI_ES = {
   'footer': 'IA Cleaner · Privado por diseño: tus archivos nunca salen de tu dispositivo.',
   'nav.guides': '<a class="link" href="/es/guias/">Guías</a>',
   'guides.title': 'Guías',
-  'guides.list': '<a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a>',
+  'guides.list': '<a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a>',
   'faq.title': 'Preguntas frecuentes',
   'faq.q1': '¿Se suben mis archivos a algún sitio?',
   'faq.a1': 'No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas con Cloudflare Web Analytics, que no usa cookies.',
@@ -429,6 +433,18 @@ const ES = {
   '-clean': '-limpio', 'Cleaning…': 'Limpiando…', 'Unsupported file format.': 'Formato de archivo no compatible.',
   'Possible traces remain': 'Pueden quedar rastros', '✓ Clean · {x} removed': '✓ Limpio · eliminados: {x}', '✓ No metadata found': '✓ Sin metadatos',
   'AI traces found in the original:': 'Rastros de IA encontrados en el original:', 'AI': 'IA',
+  'What the original reveals about how it was made': 'Lo que el original revela sobre cómo se hizo',
+  '{n} segments': '{n} segmentos', 'Made or edited with:': 'Hecho o editado con:', 'AI:': 'IA:', 'Author or account:': 'Autor o cuenta:',
+  'Edit history (Content Credentials):': 'Historial de ediciones (Content Credentials):', 'Edit history (XMP):': 'Historial de ediciones (XMP):',
+  'Photoshop history log:': 'Registro de historia de Photoshop:',
+  '✓ None of this is in the clean copy.': '✓ Nada de esto está en la copia limpia.', 'Some of this information is still in the clean copy.': 'Parte de esta información sigue en la copia limpia.',
+  'Generated with AI': 'Generado con IA', 'Edited with generative AI': 'Editado con IA generativa', 'Composite with synthetic elements': 'Composición con elementos sintéticos',
+  'Generated by an algorithm': 'Generado por un algoritmo', 'Captured with a camera': 'Capturado con una cámara',
+  'Created': 'Creado', 'Opened an existing file': 'Abrió un archivo existente', 'Placed another image': 'Colocó otra imagen', 'Edited': 'Editado',
+  'Colour adjustments': 'Ajustes de color', 'Cropped': 'Recortado', 'Resized': 'Redimensionado', 'Drawing or painting': 'Dibujo o pintura',
+  'Filters': 'Filtros', 'Rotated or flipped': 'Girado o volteado', 'Converted to another format': 'Convertido a otro formato', 'Published': 'Publicado',
+  'Content removed': 'Contenido eliminado', 'Transcoded': 'Recodificado', 'Repackaged': 'Reempaquetado', 'Redacted': 'Censurado', 'Other edits': 'Otras ediciones',
+  'Metadata edited': 'Metadatos editados', 'Watermarked': 'Marca de agua añadida', 'Translated': 'Traducido',
   'After cleaning, these words still appear in the file (they may be part of the visible content):': 'Tras limpiar, estas palabras siguen apareciendo en el archivo (pueden formar parte del contenido visible):',
   '{x} removed': 'eliminados: {x}', 'Download': 'Descargar',
   'Your clean image is ready': 'Tu imagen limpia está lista', 'Your clean document is ready': 'Tu documento limpio está listo', 'Your clean file is ready': 'Tu archivo limpio está listo',
@@ -750,7 +766,13 @@ function cleanJPEG(u8){
       const keep = (m === 0xE0 && id.startsWith('JFIF')) || (m === 0xE2 && id.startsWith('ICC_PROFILE')) || (m === 0xEE && id.startsWith('Adobe'));
       if (!keep){ drop = true; name = jpegAppName(m, id); if (id.startsWith('Exif')) orientation = exifOrientation(data); }
     } else if (m === 0xFE){ drop = true; name = tr('JPEG comment (COM)'); }
-    if (drop) removed.push({name, detail: fmtSize(data.length) + ' · ' + strings(data, 350)});
+    if (drop && m === 0xEB && removed.length && removed[removed.length - 1].app11){
+      // Content Credentials span many APP11 segments: report them as one entry
+      const last = removed[removed.length - 1]; last.app11.bytes += data.length; last.app11.n++;
+      last.detail = fmtSize(last.app11.bytes) + ' · ' + tr('{n} segments', {n: last.app11.n}) + ' · ' + last.app11.text;
+    }
+    else if (drop && m === 0xEB){ const text = strings(data, 160); removed.push({name, detail: fmtSize(data.length) + ' · ' + text, app11: {bytes: data.length, n: 1, text}}); }
+    else if (drop) removed.push({name, detail: fmtSize(data.length) + ' · ' + strings(data, 350)});
     else out.push(u8.subarray(p, end));
     p = end;
   }
@@ -868,6 +890,195 @@ function cleanBMFF(u8){
     }
   }
   return {bytes: out, removed};
+}
+
+/* =====================================================================
+   REVEAL: what Content Credentials (C2PA) and XMP say about how a file
+   was made — tool, AI use, author and the list of edits.
+   ===================================================================== */
+const CBOR_BREAK = Symbol('break');
+function cborDecode(u8, start){
+  const dv = new DataView(u8.buffer, u8.byteOffset, u8.byteLength);
+  let p = start;
+  const need = n => { if (n < 0 || p + n > u8.length) throw new Error('cbor'); };
+  const arg = ai => {
+    if (ai < 24) return ai;
+    if (ai === 24){ need(1); return u8[p++]; }
+    if (ai === 25){ need(2); const v = dv.getUint16(p); p += 2; return v; }
+    if (ai === 26){ need(4); const v = dv.getUint32(p); p += 4; return v; }
+    if (ai === 27){ need(8); const v = Number(dv.getBigUint64(p)); p += 8; return v; }
+    if (ai === 31) return -1;
+    throw new Error('cbor');
+  };
+  const item = depth => {
+    if (depth > 48) throw new Error('cbor');
+    need(1);
+    const b = u8[p++], mt = b >> 5, ai = b & 31;
+    if (mt === 7){
+      if (ai === 31) return CBOR_BREAK;
+      if (ai === 20) return false; if (ai === 21) return true;
+      if (ai === 25){ need(2); p += 2; return 0; }
+      if (ai === 26){ need(4); const v = dv.getFloat32(p); p += 4; return v; }
+      if (ai === 27){ need(8); const v = dv.getFloat64(p); p += 8; return v; }
+      if (ai === 24){ need(1); p++; }
+      return null;
+    }
+    const n = arg(ai);
+    if (mt === 0) return n;
+    if (mt === 1) return -1 - n;
+    if (mt === 2 || mt === 3){
+      if (n < 0){ let out = mt === 3 ? '' : null; for (;;){ const c = item(depth + 1); if (c === CBOR_BREAK) return out; if (mt === 3) out += c; } }
+      need(n); const sub = u8.subarray(p, p + n); p += n;
+      return mt === 3 ? new TextDecoder().decode(sub) : null; // binary values are not needed
+    }
+    if (mt === 4){
+      const a = [];
+      if (n < 0){ for (;;){ const v = item(depth + 1); if (v === CBOR_BREAK) return a; a.push(v); } }
+      for (let i = 0; i < n; i++) a.push(item(depth + 1));
+      return a;
+    }
+    if (mt === 5){
+      const o = {};
+      for (let i = 0; n < 0 || i < n; i++){
+        const k = item(depth + 1); if (k === CBOR_BREAK) break;
+        o[String(k)] = item(depth + 1);
+      }
+      return o;
+    }
+    return item(depth + 1); // mt 6: tag — keep the tagged value
+  };
+  return item(0);
+}
+// The raw C2PA (JUMBF) bytes of a file; JPEG splits them over several APP11 segments
+function c2paBytes(u8, kind){
+  if (kind === 'jpeg'){
+    const parts = []; let p = 2;
+    while (p + 4 <= u8.length && u8[p] === 0xFF){
+      const m = u8[p + 1];
+      if (m === 0xDA || m === 0xD9) break;
+      if (m === 0xFF){ p++; continue; }
+      if ((m >= 0xD0 && m <= 0xD7) || m === 0x01){ p += 2; continue; }
+      const len = (u8[p + 2] << 8) | u8[p + 3];
+      if (m === 0xEB && u8[p + 4] === 0x4A && u8[p + 5] === 0x50 && len > 18){
+        const seq = ((u8[p + 8] << 24) | (u8[p + 9] << 16) | (u8[p + 10] << 8) | u8[p + 11]) >>> 0;
+        parts.push(u8.subarray(p + 12 + (seq > 1 ? 8 : 0), p + 2 + len));
+      }
+      p += 2 + len;
+    }
+    return parts.length ? concat(parts) : null;
+  }
+  if (kind === 'bmff'){
+    try{
+      const parts = bmffBoxes(u8, 0, u8.length).filter(b => b.type === 'uuid' && hexOf(u8.subarray(b.start + b.hdr, b.start + b.hdr + 16)) === UUID_C2PA);
+      return parts.length ? concat(parts.map(b => u8.subarray(b.start, b.start + b.size))) : null;
+    }catch{ return null; }
+  }
+  if (kind === 'png' || kind === 'webp') return u8;
+  return null;
+}
+const C2PA_ACTIONS = {
+  'c2pa.created': 'Created', 'c2pa.opened': 'Opened an existing file', 'c2pa.placed': 'Placed another image',
+  'c2pa.edited': 'Edited', 'c2pa.color_adjustments': 'Colour adjustments', 'c2pa.cropped': 'Cropped',
+  'c2pa.resized': 'Resized', 'c2pa.drawing': 'Drawing or painting', 'c2pa.filtered': 'Filters',
+  'c2pa.orientation': 'Rotated or flipped', 'c2pa.converted': 'Converted to another format',
+  'c2pa.published': 'Published', 'c2pa.removed': 'Content removed', 'c2pa.transcoded': 'Transcoded',
+  'c2pa.repackaged': 'Repackaged', 'c2pa.redacted': 'Redacted', 'c2pa.unknown': 'Other edits',
+  'c2pa.edited.metadata': 'Metadata edited', 'c2pa.watermarked': 'Watermarked', 'c2pa.translated': 'Translated',
+};
+function sourceTypeLabel(t){
+  t = String(t || '');
+  if (/compositeWithTrainedAlgorithmicMedia/i.test(t)) return 'Edited with generative AI';
+  if (/trainedAlgorithmicMedia/i.test(t)) return 'Generated with AI';
+  if (/compositeSynthetic/i.test(t)) return 'Composite with synthetic elements';
+  if (/algorithmicMedia/i.test(t)) return 'Generated by an algorithm';
+  if (/digitalCapture/i.test(t)) return 'Captured with a camera';
+  return '';
+}
+function agentName(a){
+  if (!a) return '';
+  if (typeof a === 'string') return a;
+  return [a.name, a.version].filter(Boolean).join(' ');
+}
+function revealMeta(u8, kind){
+  const out = {tools: new Set(), ai: new Set(), authors: new Set(), actions: new Map(), xmp: []};
+  const data = c2paBytes(u8, kind);
+  if (data && data.length){
+    const s = latin1(data);
+    const boxAfter = (end) => {
+      for (const t of ['cbor', 'json']){ const c = s.indexOf(t, end); if (c > 0 && c - end < 48) return {t, at: c + 4}; }
+      return null;
+    };
+    const each = (prefix, fn) => {
+      let i = 0;
+      while ((i = s.indexOf(prefix, i)) >= 0){
+        const end = s.indexOf('\0', i);
+        if (end > i && end - i < 80){
+          const box = boxAfter(end);
+          if (box){
+            try{
+              if (box.t === 'cbor') fn(cborDecode(data, box.at));
+              else { const len = new DataView(data.buffer, data.byteOffset).getUint32(box.at - 8); fn(JSON.parse(new TextDecoder().decode(data.subarray(box.at, box.at - 8 + len)))); }
+            }catch{}
+          }
+        }
+        i += prefix.length;
+      }
+    };
+    each('c2pa.actions', v => {
+      for (const a of (v && v.actions) || []){
+        const name = String(a.action || '');
+        const label = C2PA_ACTIONS[name] || name.replace(/^c2pa\./, '').replace(/_/g, ' ');
+        if (label) out.actions.set(label, (out.actions.get(label) || 0) + 1);
+        const tool = agentName(a.softwareAgent); if (tool) out.tools.add(tool);
+        const ai = sourceTypeLabel(a.digitalSourceType); if (ai) out.ai.add(ai);
+      }
+    });
+    each('c2pa.claim', v => {
+      if (!v) return;
+      if (typeof v.claim_generator === 'string') out.tools.add(v.claim_generator.split(' ')[0].replace(/_/g, ' ').replace(/\/(\d)/, ' $1'));
+      const info = v.claim_generator_info;
+      for (const g of Array.isArray(info) ? info : info ? [info] : []) { const n = agentName(g); if (n) out.tools.add(n); }
+    });
+    each('stds.schema-org.CreativeWork', v => {
+      for (const a of (v && [].concat(v.author || [])) || []) if (a && a.name) out.authors.add(String(a.name));
+    });
+    each('cawg.identity', v => {
+      const n = v && v.signer_payload && v.signer_payload.name; if (n) out.authors.add(String(n));
+    });
+  }
+  // XMP edit history (Photoshop and other Adobe apps)
+  if (kind !== 'bmff' && kind !== 'pdf'){
+    const x = latin1(u8.subarray(0, Math.min(u8.length, 8 << 20)));
+    const re = /stEvt:action="([^"]+)"[^>]*?(?:stEvt:softwareAgent="([^"]*)")?/g; let m;
+    while ((m = re.exec(x)) && out.xmp.length < 200){ out.xmp.push(m[1]); if (m[2]) out.tools.add(m[2]); }
+    const re2 = /<rdf:li[^>]*>\s*<rdf:Description[^>]*stEvt:action>([^<]+)<\/stEvt:action>/g;
+    while ((m = re2.exec(x)) && out.xmp.length < 200) out.xmp.push(m[1]);
+    const ph = x.match(/<photoshop:History>([\s\S]{1,4000}?)<\/photoshop:History>/);
+    if (ph && ph[1].trim()) out.psHistory = ph[1].trim().replace(/&#xA;/g, '\n');
+    const dst = x.match(/DigitalSourceType[^"<>]*["'>]\s*([^"'<\s]+)/i);
+    if (dst){ const l = sourceTypeLabel(dst[1]); if (l) out.ai.add(l); }
+  }
+  const seen = new Set();
+  out.tools = new Set([...out.tools].filter(t => { const k = t.toLowerCase().replace(/[_\s/]+/g, ' ').trim(); if (!k || seen.has(k)) return false; seen.add(k); return true; }));
+  out.found = out.tools.size + out.ai.size + out.authors.size + out.actions.size + out.xmp.length + (out.psHistory ? 1 : 0) > 0;
+  return out;
+}
+function revealHTML(r, cleanR){
+  if (!r.found) return '';
+  const li = (k, v) => `<li><span class="k">${tr(k)}</span> ${v}</li>`;
+  const rows = [];
+  if (r.tools.size) rows.push(li('Made or edited with:', esc([...r.tools].slice(0, 6).join(' · '))));
+  if (r.ai.size) rows.push(li('AI:', esc([...r.ai].map(x => tr(x)).join(' · '))));
+  if (r.authors.size) rows.push(li('Author or account:', esc([...r.authors].slice(0, 4).join(' · '))));
+  if (r.actions.size) rows.push(li('Edit history (Content Credentials):', esc([...r.actions].slice(0, 24).map(([k, n]) => tr(k) + (n > 1 ? ' ×' + n : '')).join(' · '))));
+  if (r.xmp.length){
+    const counts = new Map(); r.xmp.forEach(a => counts.set(a, (counts.get(a) || 0) + 1));
+    rows.push(li('Edit history (XMP):', esc([...counts].slice(0, 12).map(([k, n]) => k + (n > 1 ? ' ×' + n : '')).join(' · '))));
+  }
+  if (r.psHistory) rows.push(li('Photoshop history log:', `<div class="d">${esc(r.psHistory.slice(0, 600))}${r.psHistory.length > 600 ? '…' : ''}</div>`));
+  const gone = !cleanR.found;
+  return `<div class="reveal"><strong>${tr('What the original reveals about how it was made')}</strong><ul class="items">${rows.join('')}</ul>`
+    + `<span class="reveal-note">${gone ? tr('✓ None of this is in the clean copy.') : tr('Some of this information is still in the clean copy.')}</span></div>`;
 }
 
 async function reencodeImage(blob, mime){
@@ -1093,6 +1304,8 @@ async function processFile(file){
     const ext = (file.name.split('.').pop() || '').toLowerCase();
     const kind = sniff(u8);
     const beforeAI = scanAI(kind === 'bmff' ? bmffMetaText(u8) : latin1(u8));
+    let reveal = {found: false};
+    try{ reveal = revealMeta(u8, kind); }catch(e){ console.warn(e); }
     let res, mime = file.type || 'application/octet-stream', newExt = null, afterStr;
 
     if (kind === 'pdf'){ res = await cleanPDF(u8); mime = MIME.pdf; }
@@ -1122,6 +1335,8 @@ async function processFile(file){
     else throw new Error(tr('Unsupported file format.'));
 
     const after = scanAI(afterStr !== undefined ? afterStr : latin1(res.bytes));
+    let revealAfter = {found: false};
+    if (reveal.found){ try{ revealAfter = revealMeta(res.bytes, sniff(res.bytes)); }catch{} }
     const blob = new Blob([res.bytes], {type: mime});
     const name = outName(file.name, newExt);
     results.push({name, blob});
@@ -1142,6 +1357,7 @@ async function processFile(file){
         </button>
       </div>
       ${beforeAI.length ? `<div class="callout">${tr('AI traces found in the original:')} ${esc(beforeAI.join(', '))}</div>` : ''}
+      ${revealHTML(reveal, revealAfter)}
       ${res.removed.length ? `<details class="removed" open><summary>${tr('What was removed')} (${res.removed.length})</summary><ul class="items">${res.removed.map(r => `<li><span class="k">${esc(r.name)}</span>${hasAI(r.name + ' ' + r.detail) ? `<span class="ai">${tr('AI')}</span>` : ''}${r.detail ? `<div class="d">${esc(r.detail)}</div>` : ''}</li>`).join('')}</ul></details>` : ''}
       ${(res.notes || []).map(n => `<p class="note">${esc(n)}</p>`).join('')}
       ${after.length ? `<p class="note warn">${tr('After cleaning, these words still appear in the file (they may be part of the visible content):')} ${esc(after.join(', '))}</p>` : ''}`;

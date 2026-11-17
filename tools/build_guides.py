@@ -7,7 +7,7 @@ import html, json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://iacleaner.com'
-UPDATED = '2026-11-15'
+UPDATED = '2026-11-17'
 
 T = {
   'en': {'home': '/', 'guides': '/guides/', 'guides_name': 'Guides', 'open': 'Open IA Cleaner', 'files': '/#images',
@@ -286,6 +286,87 @@ GUIDES = [
 
 <h2>Lo que no hace quitar C2PA</h2>
 <p>Algunas imágenes de IA llevan además <strong>marcas de agua invisibles</strong> integradas en los propios píxeles (por ejemplo, SynthID de Google). No son metadatos, así que ninguna herramienta de metadatos puede quitarlas. Y si una plataforma, una publicación o la ley te exige indicar que usaste IA, borrar los metadatos no cambia esa obligación.</p>
+'''},
+ },
+ {
+  'id': 'photoshop',
+  'en': {
+   'slug': 'photoshop-content-credentials-edit-history',
+   'title': 'What Photoshop Content Credentials reveal about your edits — and how to remove them',
+   'seo_title': 'Photoshop Content Credentials: What Edit History They Show & How to Remove It',
+   'desc': 'Content Credentials from Photoshop can show your name, the tools you used, a summary of your edits, placed images and any generative AI use. See exactly what your file reveals and remove it before sending it to a client.',
+   'lead': 'Exported a design and worried your client will see your messy process? Here is what Photoshop’s Content Credentials and edit log actually store, what you can control inside Photoshop, and how to check and clean the exported file.',
+   'cta': 'images', 'mins': 6,
+   'body': '''
+<h2>What Photoshop can store in an exported image</h2>
+<ul>
+<li><strong>Content Credentials (C2PA):</strong> when the feature is on, the export carries a signed record with the app and version, optionally your name or connected accounts, and a list of <em>actions</em> such as “opened”, “colour adjustments”, “cropped”, “placed another image”, “resized” or “drawing”.</li>
+<li><strong>Ingredients:</strong> if you placed other images, the record can list them as ingredients, sometimes with small thumbnails.</li>
+<li><strong>Generative AI use:</strong> when you use Firefly features such as Generative Fill, Adobe adds Content Credentials saying AI was used, even if you never turned the feature on yourself.</li>
+<li><strong>XMP history:</strong> separately, Photoshop writes a short history of saves into XMP, and if you enabled the <em>History Log</em> in Preferences it can write a detailed list of steps into the file’s metadata.</li>
+</ul>
+
+<h2>Does it show every edit you made?</h2>
+<p>Not every brush stroke. Content Credentials store a <strong>summary of action types</strong> — you will see “colour adjustments ×3”, not each curve you tried. But that summary, plus the list of placed files and the AI flag, is often enough to tell how an image was built.</p>
+<p>The detailed step-by-step list only appears if the <strong>History Log</strong> is set to save to metadata. That one can be very explicit, so check it.</p>
+
+<h2>Can you hide some edits and keep others?</h2>
+<p>Not individually. Inside Photoshop you can turn Content Credentials on or off and choose which <em>categories</em> of information to include (for example producer, edits and activity, connected accounts) before exporting. You can’t pick single edits to hide. If you want to keep nothing, export without Content Credentials or clean the exported copy.</p>
+
+<h2>See what your file reveals, then clean it</h2>
+<ol>
+<li>Open <a href="/#images">IA Cleaner → Images</a> and drop the exported JPG, PNG or WebP.</li>
+<li>Read the box <strong>What the original reveals about how it was made</strong>: the tool, the author or account, AI use and the <strong>edit history</strong> from Content Credentials and XMP.</li>
+<li>Click <strong>Download clean image</strong>. The clean copy keeps every pixel and the colour profile, and none of that history.</li>
+</ol>
+<p>The file is processed in your browser and never uploaded, so it is safe for client work.</p>
+
+<h2>Settings to check in Photoshop</h2>
+<ul>
+<li><strong>Content Credentials panel</strong> (<em>Window → Content Credentials</em>): turn it off, or untick what you don’t want to include.</li>
+<li><strong>History Log</strong> (<em>Preferences → History Log</em>, or <em>History &amp; Content Credentials</em> in recent versions): don’t save log items to metadata.</li>
+<li><strong>Export As / Save for Web:</strong> set <em>Metadata</em> to <em>None</em> or <em>Copyright</em> only.</li>
+</ul>
+<p>Remember that the PSD itself keeps all layers and history. Send a flattened export, not the working file.</p>
+'''},
+  'es': {
+   'slug': 'photoshop-content-credentials-historial',
+   'title': 'Qué revelan las Content Credentials de Photoshop sobre tus ediciones y cómo quitarlas',
+   'seo_title': 'Content Credentials de Photoshop: qué historial de ediciones muestran y cómo quitarlo',
+   'desc': 'Las Content Credentials de Photoshop pueden mostrar tu nombre, las herramientas que usaste, un resumen de tus ediciones, las imágenes colocadas y si usaste IA generativa. Mira qué revela tu archivo y quítalo antes de enviarlo a un cliente.',
+   'lead': '¿Has exportado un diseño y te preocupa que tu cliente vea tu proceso? Esto es lo que guardan de verdad las Content Credentials y el registro de historia de Photoshop, qué puedes controlar desde Photoshop y cómo revisar y limpiar el archivo exportado.',
+   'cta': 'images', 'mins': 6,
+   'body': '''
+<h2>Qué puede guardar Photoshop en una imagen exportada</h2>
+<ul>
+<li><strong>Content Credentials (C2PA):</strong> si la función está activada, la exportación lleva un registro firmado con la aplicación y su versión, opcionalmente tu nombre o tus cuentas conectadas, y una lista de <em>acciones</em> como «abrir», «ajustes de color», «recortar», «colocar otra imagen», «redimensionar» o «dibujar».</li>
+<li><strong>Ingredientes:</strong> si colocaste otras imágenes, el registro puede listarlas como ingredientes, a veces con miniaturas.</li>
+<li><strong>Uso de IA generativa:</strong> cuando usas funciones de Firefly como el Relleno generativo, Adobe añade Content Credentials que indican que se usó IA, aunque tú no hayas activado la función.</li>
+<li><strong>Historial XMP:</strong> aparte, Photoshop escribe en XMP un breve historial de guardados y, si activaste el <em>Registro de historia</em> en Preferencias, puede escribir una lista detallada de pasos en los metadatos del archivo.</li>
+</ul>
+
+<h2>¿Muestra cada edición que hiciste?</h2>
+<p>No cada pincelada. Las Content Credentials guardan un <strong>resumen por tipos de acción</strong>: verás «ajustes de color ×3», no cada curva que probaste. Pero ese resumen, junto con la lista de archivos colocados y la marca de IA, suele bastar para saber cómo se construyó la imagen.</p>
+<p>La lista detallada paso a paso solo aparece si el <strong>Registro de historia</strong> está configurado para guardarse en los metadatos. Esa sí puede ser muy explícita, así que revísala.</p>
+
+<h2>¿Se pueden ocultar algunas ediciones y dejar otras?</h2>
+<p>No una a una. En Photoshop puedes activar o desactivar las Content Credentials y elegir qué <em>categorías</em> de información incluir (por ejemplo productor, ediciones y actividad, cuentas conectadas) antes de exportar. No puedes elegir ediciones concretas para ocultarlas. Si no quieres dejar nada, exporta sin Content Credentials o limpia la copia exportada.</p>
+
+<h2>Mira qué revela tu archivo y límpialo</h2>
+<ol>
+<li>Abre <a href="/es/#images">IA Cleaner → Imágenes</a> y arrastra el JPG, PNG o WebP exportado.</li>
+<li>Lee el recuadro <strong>Lo que el original revela sobre cómo se hizo</strong>: la herramienta, el autor o la cuenta, el uso de IA y el <strong>historial de ediciones</strong> de las Content Credentials y del XMP.</li>
+<li>Pulsa <strong>Descargar imagen limpia</strong>. La copia limpia conserva todos los píxeles y el perfil de color, y nada de ese historial.</li>
+</ol>
+<p>El archivo se procesa en tu navegador y nunca se sube, así que es seguro para trabajos de clientes.</p>
+
+<h2>Ajustes que conviene revisar en Photoshop</h2>
+<ul>
+<li><strong>Panel Content Credentials</strong> (<em>Ventana → Content Credentials</em>): desactívalo o desmarca lo que no quieras incluir.</li>
+<li><strong>Registro de historia</strong> (<em>Preferencias → Registro de historia</em>, o <em>Historia y Content Credentials</em> en versiones recientes): no guardes los elementos del registro en los metadatos.</li>
+<li><strong>Exportar como / Guardar para web:</strong> pon <em>Metadatos</em> en <em>Ninguno</em> o solo <em>Copyright</em>.</li>
+</ul>
+<p>Recuerda que el PSD conserva todas las capas y el historial. Envía una exportación acoplada, no el archivo de trabajo.</p>
 '''},
  },
  {
