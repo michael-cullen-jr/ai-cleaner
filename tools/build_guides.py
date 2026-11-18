@@ -576,6 +576,79 @@ GUIDES = [
 '''},
  },
  {
+  'id': 'claude-files',
+  'en': {
+   'slug': 'claude-documents-presentations-metadata',
+   'title': 'Metadata in documents and presentations made with Claude — and how to remove it',
+   'seo_title': 'Claude Word, PowerPoint & PDF Files: What Metadata They Leave and How to Remove It',
+   'desc': 'Word, PowerPoint, Excel and PDF files created by Claude are generated with code libraries that leave tell-tale metadata such as “python-pptx”, “PptxGenJS” or “ReportLab”. See the exact values and remove them for free.',
+   'lead': 'When Claude creates a Word document, a PowerPoint presentation, a spreadsheet or a PDF, it writes the file with open-source code libraries. Those libraries fill in the document properties with their own names and default dates. Here is what to look for and how to clean it.',
+   'cta': 'documents', 'mins': 5,
+   'body': '''
+<h2>Why these files have unusual metadata</h2>
+<p>Claude doesn’t open Word or PowerPoint. It runs code that builds the file, typically with libraries such as python-docx, python-pptx, openpyxl, ReportLab, docx (JavaScript) or PptxGenJS. Each library leaves its own defaults in the document properties. We generated files with each of them and found these values:</p>
+<ul>
+<li><strong>python-docx (Word):</strong> Author <code>python-docx</code>, created and modified on <em>23 December 2013</em>, application <em>Microsoft Macintosh Word</em>.</li>
+<li><strong>python-pptx (PowerPoint):</strong> description <code>generated using python-pptx</code>, last modified by <em>Steve Canny</em> (the library’s author) and dates from January 2013.</li>
+<li><strong>openpyxl (Excel):</strong> Author <code>openpyxl</code> and application <em>Microsoft Excel Compatible / Openpyxl</em>.</li>
+<li><strong>ReportLab (PDF):</strong> producer <em>ReportLab PDF Library</em>, author <em>anonymous</em>, title <em>untitled</em>.</li>
+<li><strong>docx for JavaScript (Word):</strong> author and last modified by <code>Un-named</code>.</li>
+<li><strong>PptxGenJS (PowerPoint):</strong> title and subject <em>PptxGenJS Presentation</em>, author and company <code>PptxGenJS</code>.</li>
+</ul>
+<p>None of these says “Claude”, but anyone who opens <em>File → Properties</em> sees a document that wasn’t made in Office, often with a date years in the past. The same applies to files created by other AI assistants that write code.</p>
+
+<h2>Remove it with IA Cleaner</h2>
+<ol>
+<li>Download the file from Claude.</li>
+<li>Open <a href="/#documents">IA Cleaner → Documents</a> and drop the <code>.docx</code>, <code>.pptx</code>, <code>.xlsx</code> or PDF.</li>
+<li>The report lists every property found (author, last modified by, description, application, company, dates).</li>
+<li>Click <strong>Download clean document</strong>. Your text, slides and layout don’t change.</li>
+</ol>
+<p>We tested the six kinds of file above: after cleaning, none of those values remains anywhere in the file. Nothing is uploaded.</p>
+
+<h2>Opening and re-saving in Office isn’t enough</h2>
+<p>If you open the file in Word or PowerPoint and save it, Office updates some fields (for example “last modified by”), but the original author, creation date and description usually stay. Clean the file, then add your own details if you want them.</p>
+
+<h2>And the text you copy from Claude?</h2>
+<p>Text copied from a chat can bring invisible characters or special spaces. Paste it in <a href="/">IA Cleaner → Text</a> to see and remove them. Metadata cleaning doesn’t change your writing, so it isn’t about AI detectors that judge style.</p>
+'''},
+  'es': {
+   'slug': 'metadatos-documentos-presentaciones-claude',
+   'title': 'Metadatos en los documentos y presentaciones creados con Claude y cómo quitarlos',
+   'seo_title': 'Documentos y presentaciones de Claude (Word, PowerPoint, PDF): qué metadatos dejan y cómo quitarlos',
+   'desc': 'Los Word, PowerPoint, Excel y PDF que crea Claude se generan con librerías de código que dejan metadatos delatores como «python-pptx», «PptxGenJS» o «ReportLab». Mira los valores exactos y bórralos gratis.',
+   'lead': 'Cuando Claude crea un documento de Word, una presentación de PowerPoint, una hoja de cálculo o un PDF, escribe el archivo con librerías de código abierto. Esas librerías rellenan las propiedades del documento con su propio nombre y fechas por defecto. Esto es lo que debes buscar y cómo limpiarlo.',
+   'cta': 'documents', 'mins': 5,
+   'body': '''
+<h2>Por qué estos archivos tienen metadatos raros</h2>
+<p>Claude no abre Word ni PowerPoint. Ejecuta código que construye el archivo, normalmente con librerías como python-docx, python-pptx, openpyxl, ReportLab, docx (JavaScript) o PptxGenJS. Cada una deja sus valores por defecto en las propiedades del documento. Hemos generado archivos con cada una y estos son los valores que aparecen:</p>
+<ul>
+<li><strong>python-docx (Word):</strong> autor <code>python-docx</code>, creado y modificado el <em>23 de diciembre de 2013</em>, aplicación <em>Microsoft Macintosh Word</em>.</li>
+<li><strong>python-pptx (PowerPoint):</strong> descripción <code>generated using python-pptx</code>, última modificación por <em>Steve Canny</em> (el autor de la librería) y fechas de enero de 2013.</li>
+<li><strong>openpyxl (Excel):</strong> autor <code>openpyxl</code> y aplicación <em>Microsoft Excel Compatible / Openpyxl</em>.</li>
+<li><strong>ReportLab (PDF):</strong> productor <em>ReportLab PDF Library</em>, autor <em>anonymous</em>, título <em>untitled</em>.</li>
+<li><strong>docx para JavaScript (Word):</strong> autor y última modificación por <code>Un-named</code>.</li>
+<li><strong>PptxGenJS (PowerPoint):</strong> título y asunto <em>PptxGenJS Presentation</em>, autor y empresa <code>PptxGenJS</code>.</li>
+</ul>
+<p>Ninguno dice «Claude», pero cualquiera que abra <em>Archivo → Propiedades</em> ve un documento que no se hizo en Office, a menudo con una fecha de hace años. Lo mismo puede pasar con archivos creados por otros asistentes de IA que escriben código.</p>
+
+<h2>Quítalos con IA Cleaner</h2>
+<ol>
+<li>Descarga el archivo desde Claude.</li>
+<li>Abre <a href="/es/#documents">IA Cleaner → Documentos</a> y arrastra el <code>.docx</code>, <code>.pptx</code>, <code>.xlsx</code> o PDF.</li>
+<li>El informe muestra cada propiedad encontrada (autor, última modificación por, descripción, aplicación, empresa, fechas).</li>
+<li>Pulsa <strong>Descargar documento limpio</strong>. El texto, las diapositivas y el diseño no cambian.</li>
+</ol>
+<p>Lo hemos probado con los seis tipos de archivo de arriba: después de limpiarlos, no queda ninguno de esos valores en ninguna parte del archivo. No se sube nada.</p>
+
+<h2>Abrirlo y guardarlo en Office no basta</h2>
+<p>Si abres el archivo en Word o PowerPoint y lo guardas, Office actualiza algunos campos (por ejemplo «última modificación por»), pero el autor original, la fecha de creación y la descripción suelen quedarse. Límpialo primero y, si quieres, añade después tus propios datos.</p>
+
+<h2>¿Y el texto que copias de Claude?</h2>
+<p>El texto copiado de un chat puede traer caracteres invisibles o espacios especiales. Pégalo en <a href="/es/">IA Cleaner → Texto</a> para verlos y quitarlos. Limpiar metadatos no cambia tu redacción, así que no tiene que ver con los detectores de IA que juzgan el estilo.</p>
+'''},
+ },
+ {
   'id': 'pdf',
   'en': {
    'slug': 'remove-pdf-metadata',
