@@ -46,7 +46,7 @@ out = attr(out, 'aria', 'aria-label')
 # ---- Page-level replacements ----
 ES_HEAD = '''<!-- SEO:START -->
 <title>IA Cleaner — Elimina metadatos de IA de imágenes, PDF y textos (gratis y privado)</title>
-<meta name="description" content="Herramienta online gratuita para eliminar metadatos de IA: C2PA / Content Credentials, EXIF, XMP, prompts en PNG, propiedades de documentos y caracteres ocultos de ChatGPT. Funciona 100 % en tu navegador: no se sube nada.">
+<meta name="description" content="Quita, borra o elimina metadatos online gratis: fotos, vídeos, PDF, Word y textos. Metadatos de IA: C2PA / Content Credentials, EXIF, XMP, prompts en PNG, propiedades de documentos y caracteres ocultos de ChatGPT. Funciona 100 % en tu navegador: no se sube nada.">
 <link rel="canonical" href="https://iacleaner.com/es/">
 <meta property="og:url" content="https://iacleaner.com/es/">
 <meta property="og:locale" content="es_ES">

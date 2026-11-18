@@ -7,7 +7,7 @@ import html, json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://iacleaner.com'
-UPDATED = '2026-11-17'
+UPDATED = '2026-11-18'
 
 T = {
   'en': {'home': '/', 'guides': '/guides/', 'guides_name': 'Guides', 'open': 'Open IA Cleaner', 'files': '/#images',
@@ -73,7 +73,7 @@ GUIDES = [
    'slug': 'etiqueta-ia-instagram',
    'title': 'Por qué Instagram pone «Información de IA» en tu foto y cómo quitar los metadatos que la activan',
    'seo_title': 'Etiqueta «Información de IA» en Instagram: por qué sale y cómo quitarla',
-   'desc': '¿Instagram marca tu foto con «Información de IA»? Suele deberse a metadatos C2PA o IPTC. Compruébalo y límpialos gratis en tu navegador, sin subir la foto. Guía paso a paso.',
+   'desc': '¿Instagram marca tu foto, publicación o historia con «Información de IA»? Suele deberse a metadatos C2PA o IPTC. Compruébalo y quítalos gratis en tu navegador, sin subir la foto. Guía paso a paso.',
    'lead': '¿Has subido una foto real e Instagram la ha marcado con «Información de IA»? Normalmente no son los píxeles: son los metadatos que tu app de edición escribió en el archivo. Te explicamos cómo funciona y cómo limpiarlo.',
    'cta': 'images', 'mins': 5,
    'body': '''
@@ -614,7 +614,7 @@ GUIDES = [
   'es': {
    'slug': 'borrar-metadatos-pdf',
    'title': 'Cómo borrar los metadatos de un PDF',
-   'seo_title': 'Borrar metadatos de un PDF gratis (autor, creador, XMP) sin Acrobat',
+   'seo_title': 'Borrar o eliminar metadatos de un PDF online gratis (autor, XMP), sin Acrobat',
    'desc': 'Mira qué metadatos tiene tu PDF (autor, programa, fechas, XMP) y bórralos gratis en tu navegador: sin Acrobat, sin registro y sin subir el archivo.',
    'lead': 'Todo PDF lleva información sobre quién lo hizo y con qué programa. Te contamos qué contiene, por qué importa y cómo eliminarla sin subir tu archivo a ningún sitio.',
    'cta': 'documents', 'mins': 4,
@@ -722,7 +722,7 @@ GUIDES = [
   'en': {
    'slug': 'remove-photo-metadata-iphone-android',
    'title': 'How to remove metadata from a photo on iPhone or Android',
-   'seo_title': 'Remove Photo Metadata on iPhone & Android (GPS, EXIF) — Free',
+   'seo_title': 'Remove Photo Metadata & Location on iPhone and Android (GPS, EXIF) — Free',
    'desc': 'Photos from your phone store GPS location, device model, date and editing apps. Here is how to remove that metadata on iPhone or Android, for free and without installing anything.',
    'lead': 'Every photo you take with your phone can carry the exact place where you took it, the phone model and the apps you edited it with. Here is how to share it without that information, straight from your phone’s browser.',
    'cta': 'images', 'mins': 4,
@@ -758,7 +758,7 @@ GUIDES = [
   'es': {
    'slug': 'quitar-metadatos-foto-movil',
    'title': 'Cómo quitar los metadatos de una foto en el móvil (iPhone y Android)',
-   'seo_title': 'Quitar metadatos de una foto en el móvil (iPhone y Android) gratis',
+   'seo_title': 'Quitar metadatos y ubicación de una foto en el móvil (iPhone y Android) gratis',
    'desc': 'Las fotos del móvil guardan la ubicación GPS, el modelo del teléfono, la fecha y las apps de edición. Así puedes quitar esos metadatos en iPhone o Android, gratis y sin instalar nada.',
    'lead': 'Cada foto que haces con el móvil puede llevar el lugar exacto donde la hiciste, el modelo del teléfono y las apps con las que la editaste. Así puedes compartirla sin esa información, directamente desde el navegador del móvil.',
    'cta': 'images', 'mins': 4,
@@ -833,8 +833,8 @@ GUIDES = [
   'es': {
    'slug': 'quitar-metadatos-word',
    'title': 'Cómo quitar los metadatos de un documento de Word',
-   'seo_title': 'Quitar metadatos de un Word (autor, empresa) gratis y sin subirlo',
-   'desc': 'Un archivo .docx guarda el autor, la empresa, quién lo editó por última vez, el tiempo de edición y la plantilla. Así puedes ver y quitar esos metadatos gratis, con o sin Word.',
+   'seo_title': 'Quitar o borrar metadatos de Word y Excel (autor, empresa) online gratis',
+   'desc': 'Los archivos de Word, Excel y PowerPoint guardan el autor, la empresa, quién los editó por última vez, el tiempo de edición y la plantilla. Así puedes ver y eliminar esos metadatos online gratis, con o sin Office.',
    'lead': 'Si envías un Word, puede que también estés enviando tu nombre completo, tu empresa, quién lo editó por última vez y cuánto tiempo le dedicaste. Esto es lo que guarda un .docx y cómo quitarlo, con el inspector de Word o desde el navegador.',
    'cta': 'documents', 'mins': 5,
    'body': '''
@@ -930,6 +930,408 @@ GUIDES = [
 <li><strong>¿Puede OpenAI seguir reconociendo la imagen?</strong> Es posible. OpenAI ha dicho que también usa herramientas internas para identificar sus propias imágenes, y quitar los metadatos no cambia eso.</li>
 <li><strong>¿Está permitido?</strong> Quitar los metadatos de tus propias imágenes es legal, pero algunas plataformas y empresas exigen indicar el uso de IA. Sé honesto donde importe.</li>
 </ul>
+'''},
+ },
+ {
+  'id': 'video',
+  'en': {
+   'slug': 'remove-video-metadata-mp4-mov',
+   'title': 'How to remove metadata from a video (MP4 and MOV)',
+   'seo_title': 'Remove Metadata from a Video (MP4, MOV) Online — Free, No Re-encoding',
+   'desc': 'Videos store GPS location, phone model, editing apps and AI Content Credentials (C2PA). Remove them online for free, without re-encoding and without uploading the video.',
+   'lead': 'A video from your phone or from an AI generator can carry where it was recorded, which device or app made it, and a provenance record saying it was AI-generated. Here is what an MP4 or MOV contains and how to strip it without losing quality.',
+   'cta': 'video', 'mins': 5,
+   'body': '''
+<h2>What metadata a video file contains</h2>
+<ul>
+<li><strong>Location:</strong> iPhone and Android videos usually store the GPS coordinates where they were recorded.</li>
+<li><strong>Device and software:</strong> make, model, iOS or Android version, and the app or encoder that exported the file.</li>
+<li><strong>Dates</strong> of recording and editing.</li>
+<li><strong>XMP:</strong> editing history from apps such as Premiere Pro or CapCut.</li>
+<li><strong>C2PA / Content Credentials:</strong> a signed record that AI video tools and some editors add, often saying the video was generated or edited with AI. TikTok, Instagram and YouTube can read it.</li>
+</ul>
+
+<h2>How to remove video metadata with IA Cleaner</h2>
+<ol>
+<li>Open <a href="/#video">IA Cleaner → Video</a>.</li>
+<li>Drop your MP4, MOV or M4V. On a phone, tap the drop zone and pick the video from your gallery.</li>
+<li>Check the report: location, device data, XMP and Content Credentials are listed, and the box <em>What the original reveals</em> shows any tool, author or edit history found.</li>
+<li>Click <strong>Download clean video</strong>.</li>
+</ol>
+<p>The video is cleaned <strong>losslessly</strong>: the metadata boxes are removed and the file structure is rebuilt, but no frame is re-encoded, so quality and size stay the same. Nothing is uploaded — even large videos are processed in your browser.</p>
+
+<h2>What stays in the file</h2>
+<ul>
+<li>The basic technical data every player needs (resolution, duration, codec) and the container’s internal creation time.</li>
+<li>Anything visible in the picture or audible in the sound, including visible watermarks and burned-in captions.</li>
+<li>Invisible watermarks embedded in the frames themselves, such as Google’s SynthID. Those are not metadata.</li>
+</ul>
+<p>Other formats such as WebM, MKV or AVI are not supported yet. If you need them, export to MP4 first.</p>
+
+<h2>Other ways</h2>
+<ul>
+<li><strong>ffmpeg:</strong> <code>ffmpeg -i in.mp4 -map_metadata -1 -c copy out.mp4</code> removes most global metadata without re-encoding, but can leave per-track data and does not always remove C2PA boxes.</li>
+<li><strong>Re-exporting</strong> from a video editor usually drops the original metadata but re-encodes the video and adds the editor’s own.</li>
+</ul>
+'''},
+  'es': {
+   'slug': 'quitar-metadatos-video',
+   'title': 'Cómo quitar los metadatos de un vídeo (MP4 y MOV)',
+   'seo_title': 'Quitar o borrar metadatos de un vídeo (MP4, MOV) online gratis y sin recodificar',
+   'desc': 'Los vídeos guardan la ubicación GPS, el modelo del móvil, las apps de edición y las Content Credentials (C2PA) de la IA. Bórralos online gratis, sin recodificar y sin subir el vídeo.',
+   'lead': 'Un vídeo del móvil o de un generador de IA puede llevar dónde se grabó, con qué dispositivo o app se hizo y un registro de procedencia que dice que se generó con IA. Esto es lo que contiene un MP4 o MOV y cómo eliminarlo sin perder calidad.',
+   'cta': 'video', 'mins': 5,
+   'body': '''
+<h2>Qué metadatos tiene un vídeo</h2>
+<ul>
+<li><strong>Ubicación:</strong> los vídeos de iPhone y Android suelen guardar las coordenadas GPS donde se grabaron.</li>
+<li><strong>Dispositivo y software:</strong> marca, modelo, versión de iOS o Android y la app o el codificador que exportó el archivo.</li>
+<li><strong>Fechas</strong> de grabación y de edición.</li>
+<li><strong>XMP:</strong> historial de edición de apps como Premiere Pro o CapCut.</li>
+<li><strong>C2PA / Content Credentials:</strong> un registro firmado que añaden las herramientas de vídeo con IA y algunos editores, y que a menudo dice que el vídeo se generó o editó con IA. TikTok, Instagram y YouTube pueden leerlo.</li>
+</ul>
+
+<h2>Cómo quitar los metadatos de un vídeo con IA Cleaner</h2>
+<ol>
+<li>Abre <a href="/es/#video">IA Cleaner → Vídeo</a>.</li>
+<li>Arrastra tu MP4, MOV o M4V. En el móvil, toca la zona de carga y elige el vídeo de tu galería.</li>
+<li>Revisa el informe: aparecen la ubicación, los datos del dispositivo, el XMP y las Content Credentials, y el recuadro <em>Lo que el original revela</em> muestra la herramienta, el autor o el historial de ediciones que haya.</li>
+<li>Pulsa <strong>Descargar vídeo limpio</strong>.</li>
+</ol>
+<p>El vídeo se limpia <strong>sin pérdida</strong>: se eliminan los bloques de metadatos y se reconstruye la estructura del archivo, pero no se vuelve a codificar ningún fotograma, así que la calidad y el tamaño no cambian. No se sube nada: incluso los vídeos grandes se procesan en tu navegador.</p>
+
+<h2>Lo que se queda en el archivo</h2>
+<ul>
+<li>Los datos técnicos básicos que necesita cualquier reproductor (resolución, duración, códec) y la fecha interna de creación del contenedor.</li>
+<li>Todo lo que se ve en la imagen o se oye en el audio, incluidas las marcas de agua visibles y los subtítulos incrustados.</li>
+<li>Las marcas de agua invisibles dentro de los propios fotogramas, como SynthID de Google. Eso no son metadatos.</li>
+</ul>
+<p>Otros formatos como WebM, MKV o AVI todavía no son compatibles. Si los necesitas, expórtalos antes a MP4.</p>
+
+<h2>Otras formas</h2>
+<ul>
+<li><strong>ffmpeg:</strong> <code>ffmpeg -i entrada.mp4 -map_metadata -1 -c copy salida.mp4</code> quita la mayoría de metadatos globales sin recodificar, pero puede dejar datos por pista y no siempre elimina los bloques C2PA.</li>
+<li><strong>Volver a exportar</strong> desde un editor de vídeo suele quitar los metadatos originales, pero recodifica el vídeo y añade los del propio editor.</li>
+</ul>
+'''},
+ },
+ {
+  'id': 'samsung',
+  'en': {
+   'slug': 'samsung-galaxy-ai-label',
+   'title': 'The AI label on Samsung Galaxy photos: what it is and what you can remove',
+   'seo_title': 'Samsung Galaxy AI Label & Watermark on Photos: What You Can Remove',
+   'desc': 'Photos edited with Galaxy AI get a visible mark and AI metadata that phones and social networks read. Here is what each part is, which one IA Cleaner removes and which one it can’t.',
+   'lead': 'Edited a photo with Galaxy AI and now it shows an AI icon, or social networks label it as AI-generated? Samsung adds two different things to those images. Here is what each one is and what you can do about it.',
+   'cta': 'images', 'mins': 4,
+   'body': '''
+<h2>Two different things: a visible mark and metadata</h2>
+<ul>
+<li><strong>A visible mark in the corner</strong> of images changed with generative Galaxy AI features (such as Generative Edit). It is part of the picture itself — pixels, not metadata.</li>
+<li><strong>Metadata</strong> written into the file stating that the image was edited with AI. On recent models this can include C2PA Content Credentials. Gallery, other apps and social networks like Instagram, Facebook or TikTok can read it and show “AI-generated content” labels.</li>
+</ul>
+
+<h2>Remove the AI metadata</h2>
+<ol>
+<li>On your phone, open <a href="/#images">iacleaner.com → Images</a> in Samsung Internet or Chrome.</li>
+<li>Tap the drop zone and choose the photo from your gallery.</li>
+<li>The report shows the metadata found and flags AI-related entries; the box <em>What the original reveals</em> lists the tool and AI use.</li>
+<li>Tap <strong>Download clean image</strong> and share that copy.</li>
+</ol>
+<p>The photo never leaves your phone and its pixels are not changed.</p>
+
+<h2>What IA Cleaner can’t remove</h2>
+<p>The visible mark is drawn into the image, so removing metadata does not touch it. IA Cleaner does not edit pixels. Also keep in mind that platforms can detect AI in other ways, and many require you to disclose realistic AI edits — be honest where it matters.</p>
+
+<h2>Tips</h2>
+<ul>
+<li>Keep the original in your gallery; the clean copy is a separate file.</li>
+<li>Galaxy AI features that don’t generate new content usually don’t add these labels. If you are unsure, drop the photo into IA Cleaner and check the report.</li>
+</ul>
+'''},
+  'es': {
+   'slug': 'etiqueta-ia-samsung-galaxy',
+   'title': 'La etiqueta de IA en las fotos de Samsung Galaxy: qué es y qué puedes quitar',
+   'seo_title': 'Quitar la etiqueta de IA de las fotos de Samsung (Galaxy AI): qué se puede y qué no',
+   'desc': 'Las fotos editadas con Galaxy AI llevan una marca visible y metadatos de IA que leen el móvil y las redes sociales. Te explicamos qué es cada cosa, cuál quita IA Cleaner y cuál no.',
+   'lead': '¿Has editado una foto con Galaxy AI y ahora sale un icono de IA, o las redes la marcan como «contenido generado por IA»? Samsung añade dos cosas distintas a esas imágenes. Esto es lo que es cada una y qué puedes hacer.',
+   'cta': 'images', 'mins': 4,
+   'body': '''
+<h2>Dos cosas distintas: una marca visible y metadatos</h2>
+<ul>
+<li><strong>Una marca visible en la esquina</strong> de las imágenes modificadas con funciones generativas de Galaxy AI (como la Edición generativa). Forma parte de la propia imagen: son píxeles, no metadatos.</li>
+<li><strong>Metadatos</strong> escritos dentro del archivo que indican que la imagen se editó con IA. En modelos recientes pueden incluir Content Credentials (C2PA). La Galería, otras apps y redes como Instagram, Facebook o TikTok pueden leerlos y mostrar etiquetas de «contenido generado por IA».</li>
+</ul>
+
+<h2>Quita los metadatos de IA</h2>
+<ol>
+<li>En el móvil, abre <a href="/es/#images">iacleaner.com → Imágenes</a> en Samsung Internet o Chrome.</li>
+<li>Toca la zona de carga y elige la foto de tu galería.</li>
+<li>El informe muestra los metadatos encontrados y marca los relacionados con IA; el recuadro <em>Lo que el original revela</em> indica la herramienta y el uso de IA.</li>
+<li>Toca <strong>Descargar imagen limpia</strong> y comparte esa copia.</li>
+</ol>
+<p>La foto no sale de tu móvil y sus píxeles no cambian.</p>
+
+<h2>Lo que IA Cleaner no puede quitar</h2>
+<p>La marca visible está dibujada en la imagen, así que quitar los metadatos no la toca. IA Cleaner no edita píxeles. Ten en cuenta también que las plataformas pueden detectar la IA de otras formas y que muchas exigen indicar las ediciones realistas hechas con IA: sé honesto donde importe.</p>
+
+<h2>Consejos</h2>
+<ul>
+<li>Guarda el original en la galería; la copia limpia es un archivo aparte.</li>
+<li>Las funciones de Galaxy AI que no generan contenido nuevo no suelen añadir estas etiquetas. Si dudas, arrastra la foto a IA Cleaner y revisa el informe.</li>
+</ul>
+'''},
+ },
+ {
+  'id': 'social',
+  'en': {
+   'slug': 'ai-label-facebook-x-linkedin',
+   'title': 'AI labels on Facebook, Threads, LinkedIn, X and YouTube: why they appear',
+   'seo_title': '“Made with AI” / “AI Info” Label on Facebook, LinkedIn, X & YouTube: Why & How to Fix',
+   'desc': 'Facebook, Threads, LinkedIn, YouTube and other networks use C2PA and IPTC metadata — and what creators declare — to show AI labels. See what triggers them and how to check and clean your file before posting.',
+   'lead': 'The same photo can get an “AI info” label on Facebook, a CR icon on LinkedIn and an “altered or synthetic” note on YouTube. Most of these labels start with the same thing: metadata inside your file. Here is how each network decides, and what you can check before posting.',
+   'cta': 'images', 'mins': 5,
+   'body': '''
+<h2>What each network looks at</h2>
+<ul>
+<li><strong>Facebook and Threads (Meta):</strong> the same system as Instagram — the “AI info” label appears when the file carries C2PA Content Credentials or IPTC fields saying it was made or edited with AI, or when you mark it yourself. See the <a href="/guides/instagram-ai-info-label/">Instagram guide</a>.</li>
+<li><strong>LinkedIn:</strong> shows a small <strong>CR</strong> icon on images with Content Credentials. Clicking it reveals the tool, and often that AI was used.</li>
+<li><strong>YouTube:</strong> asks creators to disclose realistic altered or synthetic content, and also uses C2PA, for example to show “captured with a camera”.</li>
+<li><strong>X and others:</strong> labelling rules change often; many rely on what the creator declares, on metadata or on their own detection.</li>
+</ul>
+
+<h2>Check and clean your file before posting</h2>
+<ol>
+<li>Open <a href="/#images">IA Cleaner → Images</a> (or <a href="/#video">Video</a> for MP4/MOV).</li>
+<li>Drop the exact file you were going to upload.</li>
+<li>Look for <em>C2PA / Content Credentials</em>, <em>XMP</em> with <code>DigitalSourceType</code> and the box <em>What the original reveals</em>.</li>
+<li>Download the clean copy and upload that one.</li>
+</ol>
+
+<h2>What this won’t change</h2>
+<ul>
+<li>A label you added yourself, or one a network applies because of its own detection or your account settings.</li>
+<li>Invisible watermarks in the pixels (such as SynthID) or visible logos.</li>
+<li>Your obligations: most networks require you to disclose realistic AI-generated content. Removing metadata is about privacy and accuracy — for example when a small AI retouch marks a real photo as “AI” — not about hiding synthetic media.</li>
+</ul>
+'''},
+  'es': {
+   'slug': 'etiqueta-ia-facebook-x-linkedin',
+   'title': 'Etiquetas de IA en Facebook, Threads, LinkedIn, X y YouTube: por qué aparecen',
+   'seo_title': 'Quitar la etiqueta «Información de IA» en Facebook, LinkedIn, X y YouTube: por qué sale',
+   'desc': 'Facebook, Threads, LinkedIn, YouTube y otras redes usan los metadatos C2PA e IPTC, y lo que declara el creador, para mostrar etiquetas de IA. Mira qué las activa y cómo revisar y limpiar tu archivo antes de publicar.',
+   'lead': 'La misma foto puede recibir la etiqueta «Información de IA» en Facebook, un icono CR en LinkedIn y un aviso de «contenido alterado o sintético» en YouTube. Casi todas empiezan por lo mismo: los metadatos de tu archivo. Así decide cada red y esto es lo que puedes revisar antes de publicar.',
+   'cta': 'images', 'mins': 5,
+   'body': '''
+<h2>Qué mira cada red</h2>
+<ul>
+<li><strong>Facebook y Threads (Meta):</strong> el mismo sistema que Instagram. La etiqueta «Información de IA» aparece cuando el archivo lleva Content Credentials (C2PA) o campos IPTC que dicen que se creó o editó con IA, o cuando la marcas tú. Mira la <a href="/es/guias/etiqueta-ia-instagram/">guía de Instagram</a>.</li>
+<li><strong>LinkedIn:</strong> muestra un pequeño icono <strong>CR</strong> en las imágenes con Content Credentials. Al pulsarlo se ve la herramienta y, a menudo, que se usó IA.</li>
+<li><strong>YouTube:</strong> pide a los creadores que indiquen el contenido alterado o sintético realista, y también usa C2PA, por ejemplo para mostrar «grabado con una cámara».</li>
+<li><strong>X y otras:</strong> sus normas de etiquetado cambian a menudo; muchas se basan en lo que declara el creador, en los metadatos o en su propia detección.</li>
+</ul>
+
+<h2>Revisa y limpia tu archivo antes de publicar</h2>
+<ol>
+<li>Abre <a href="/es/#images">IA Cleaner → Imágenes</a> (o <a href="/es/#video">Vídeo</a> para MP4/MOV).</li>
+<li>Arrastra exactamente el archivo que ibas a subir.</li>
+<li>Busca <em>C2PA / Content Credentials</em>, <em>XMP</em> con <code>DigitalSourceType</code> y el recuadro <em>Lo que el original revela</em>.</li>
+<li>Descarga la copia limpia y sube esa.</li>
+</ol>
+
+<h2>Lo que esto no cambia</h2>
+<ul>
+<li>Una etiqueta que hayas puesto tú, o que la red añada por su propia detección o por la configuración de tu cuenta.</li>
+<li>Las marcas de agua invisibles en los píxeles (como SynthID) o los logos visibles.</li>
+<li>Tus obligaciones: la mayoría de redes exigen indicar el contenido realista generado con IA. Quitar metadatos sirve para tu privacidad y para evitar etiquetas injustas (por ejemplo, cuando un pequeño retoque con IA marca una foto real como «IA»), no para ocultar contenido sintético.</li>
+</ul>
+'''},
+ },
+ {
+  'id': 'watermark',
+  'en': {
+   'slug': 'remove-ai-watermark',
+   'title': 'AI watermarks: what can be removed and what can’t (C2PA, SynthID, ChatGPT text)',
+   'seo_title': 'Can You Remove an AI Watermark? C2PA vs SynthID vs ChatGPT Text, Explained',
+   'desc': '“AI watermark” can mean three very different things: metadata like C2PA, invisible watermarks like SynthID, and visible logos. Here is which ones exist in images, video and text, and which ones a metadata cleaner can remove.',
+   'lead': 'People say “AI watermark” for three different things. Only one of them is metadata. Here is an honest breakdown of what ChatGPT, Gemini, Firefly and others add, and what can and can’t be removed.',
+   'cta': 'images', 'mins': 6,
+   'body': '''
+<h2>1. Metadata “watermarks” (removable)</h2>
+<p><strong>C2PA Content Credentials</strong>, XMP and IPTC fields are records stored <em>next to</em> the image or video data. ChatGPT, Adobe Firefly, Microsoft tools and others write them to say a file was AI-generated. They are what most social networks read to show AI labels, and they can be removed without touching a single pixel — that is exactly what <a href="/#images">IA Cleaner</a> does.</p>
+
+<h2>2. Invisible watermarks (not removable here)</h2>
+<p><strong>SynthID</strong> (Google: Gemini, Imagen, Veo) and similar systems hide a signal in the pixels, audio or word choices themselves. It survives screenshots, cropping and compression and is detected only by the provider’s own tools. It is not metadata, so no metadata cleaner — including IA Cleaner — can see or remove it. Tools that claim to remove it do so by altering the content itself.</p>
+
+<h2>3. Visible marks (not removable here)</h2>
+<p>Logos or icons drawn into the image, like the mark Samsung adds to Galaxy AI edits. They are part of the picture. IA Cleaner does not edit pixels.</p>
+
+<h2>What about ChatGPT text?</h2>
+<p>There is no visible watermark in ChatGPT text. What people find are <strong>invisible Unicode characters</strong>, citation markers like <code>oaicite</code> and <code>utm_source=chatgpt.com</code> links that come along when you copy. Those are easy to detect and remove — see <a href="/guides/chatgpt-hidden-characters/">ChatGPT hidden characters</a> or paste your text in <a href="/">IA Cleaner → Text</a>. Statistical watermarks in word choice, if a provider uses them, can’t be removed by cleaning characters.</p>
+
+<h2>Quick summary</h2>
+<ul>
+<li><strong>C2PA, XMP, IPTC, PNG prompts:</strong> removable, losslessly.</li>
+<li><strong>Hidden characters in text:</strong> removable.</li>
+<li><strong>SynthID and other invisible watermarks:</strong> not removable with a metadata tool.</li>
+<li><strong>Visible logos:</strong> not removable with a metadata tool.</li>
+</ul>
+<p>Use this for privacy and to avoid wrong labels, and disclose AI use where it is required.</p>
+'''},
+  'es': {
+   'slug': 'quitar-marca-de-agua-ia',
+   'title': 'Marcas de agua de IA: qué se puede quitar y qué no (C2PA, SynthID, texto de ChatGPT)',
+   'seo_title': '¿Se puede quitar la marca de agua de IA? C2PA, SynthID y texto de ChatGPT explicados',
+   'desc': '«Marca de agua de IA» puede ser tres cosas muy distintas: metadatos como C2PA, marcas invisibles como SynthID y logos visibles. Te explicamos cuáles hay en imágenes, vídeos y textos, y cuáles se pueden quitar con un limpiador de metadatos.',
+   'lead': 'Se llama «marca de agua de IA» a tres cosas distintas, y solo una son metadatos. Este es un resumen honesto de lo que añaden ChatGPT, Gemini, Firefly y otras herramientas, y de lo que se puede y no se puede quitar.',
+   'cta': 'images', 'mins': 6,
+   'body': '''
+<h2>1. «Marcas» en los metadatos (se pueden quitar)</h2>
+<p>Las <strong>Content Credentials (C2PA)</strong> y los campos XMP e IPTC son registros guardados <em>junto a</em> los datos de la imagen o el vídeo. ChatGPT, Adobe Firefly, las herramientas de Microsoft y otras los escriben para indicar que un archivo se generó con IA. Son lo que leen la mayoría de redes para mostrar etiquetas de IA, y se pueden quitar sin tocar ni un píxel: es justo lo que hace <a href="/es/#images">IA Cleaner</a>.</p>
+
+<h2>2. Marcas de agua invisibles (aquí no se pueden quitar)</h2>
+<p><strong>SynthID</strong> (Google: Gemini, Imagen, Veo) y sistemas parecidos esconden una señal en los propios píxeles, en el audio o en la elección de palabras. Sobrevive a capturas, recortes y compresión, y solo la detectan las herramientas del propio proveedor. No son metadatos, así que ningún limpiador de metadatos, tampoco IA Cleaner, puede verla ni quitarla. Las herramientas que dicen eliminarla lo hacen alterando el propio contenido.</p>
+
+<h2>3. Marcas visibles (aquí no se pueden quitar)</h2>
+<p>Logos o iconos dibujados en la imagen, como la marca que añade Samsung a las ediciones con Galaxy AI. Forman parte de la imagen. IA Cleaner no edita píxeles.</p>
+
+<h2>¿Y el texto de ChatGPT?</h2>
+<p>El texto de ChatGPT no lleva una marca de agua visible. Lo que la gente encuentra son <strong>caracteres Unicode invisibles</strong>, marcas de cita como <code>oaicite</code> y enlaces con <code>utm_source=chatgpt.com</code> que vienen al copiar. Eso se detecta y se quita fácilmente: mira <a href="/es/guias/caracteres-ocultos-chatgpt/">caracteres ocultos de ChatGPT</a> o pega tu texto en <a href="/es/">IA Cleaner → Texto</a>. Las marcas estadísticas en la elección de palabras, si un proveedor las usa, no se quitan limpiando caracteres.</p>
+
+<h2>Resumen rápido</h2>
+<ul>
+<li><strong>C2PA, XMP, IPTC, prompts en PNG:</strong> se pueden quitar, sin pérdida.</li>
+<li><strong>Caracteres ocultos en el texto:</strong> se pueden quitar.</li>
+<li><strong>SynthID y otras marcas invisibles:</strong> no se quitan con una herramienta de metadatos.</li>
+<li><strong>Logos visibles:</strong> no se quitan con una herramienta de metadatos.</li>
+</ul>
+<p>Úsalo para tu privacidad y para evitar etiquetas injustas, e indica el uso de IA donde sea obligatorio.</p>
+'''},
+ },
+ {
+  'id': 'whatsapp',
+  'en': {
+   'slug': 'whatsapp-photo-metadata',
+   'title': 'Does WhatsApp remove photo metadata? What gets sent and how to be sure',
+   'seo_title': 'Does WhatsApp Remove Photo Metadata (GPS, EXIF)? Photo vs Document Explained',
+   'desc': 'WhatsApp usually strips most metadata when you send a photo, but not when you send it as a document. Here is what is kept in each case and how to clean a photo before sending it.',
+   'lead': 'It depends on how you send it. As a normal photo, WhatsApp recompresses the image and drops most metadata. As a document, it sends the original file untouched — GPS location included. Here is how to be sure.',
+   'cta': 'images', 'mins': 4,
+   'body': '''
+<h2>Sent as a photo</h2>
+<p>When you send an image the usual way (gallery or camera), WhatsApp makes a new, compressed copy. That copy normally loses most EXIF data, including the GPS location and the camera model, and any C2PA Content Credentials. Quality is reduced too, even with the HD option.</p>
+
+<h2>Sent as a document</h2>
+<p>When you attach the image as a <strong>document</strong> to keep full quality, WhatsApp sends the original file byte for byte. Everything inside it travels too: GPS location, phone model, dates, editing apps and AI metadata.</p>
+
+<h2>Other apps work differently</h2>
+<ul>
+<li><strong>Telegram:</strong> “photo” is compressed; “file” sends the original with all its metadata.</li>
+<li><strong>Email, cloud links and AirDrop:</strong> usually send the original file.</li>
+<li><strong>Social networks:</strong> most strip metadata from the public copy, but read it first when you upload.</li>
+</ul>
+
+<h2>Clean the photo before sending it</h2>
+<ol>
+<li>Open <a href="/#images">iacleaner.com → Images</a> in your phone’s browser.</li>
+<li>Pick the photo, check what it contains, and tap <strong>Download clean image</strong>.</li>
+<li>Send the clean copy, as a photo or as a document — full quality, no metadata.</li>
+</ol>
+<p>Nothing is uploaded: the photo is cleaned on your phone.</p>
+
+<h2>Can you see the metadata of a photo you received?</h2>
+<p>If it came as a normal WhatsApp photo, there is usually little left besides basic size information. If it came as a document, drop it into IA Cleaner to see everything it contains.</p>
+'''},
+  'es': {
+   'slug': 'metadatos-fotos-whatsapp',
+   'title': '¿WhatsApp borra los metadatos de las fotos? Qué se envía y cómo asegurarte',
+   'seo_title': '¿WhatsApp borra los metadatos de las fotos (GPS, EXIF)? Foto o documento',
+   'desc': 'WhatsApp suele quitar casi todos los metadatos al enviar una foto, pero no si la envías como documento. Te explicamos qué se conserva en cada caso y cómo limpiar una foto antes de enviarla.',
+   'lead': 'Depende de cómo la envíes. Como foto normal, WhatsApp vuelve a comprimir la imagen y quita casi todos los metadatos. Como documento, envía el archivo original sin tocar, con la ubicación GPS incluida. Así puedes asegurarte.',
+   'cta': 'images', 'mins': 4,
+   'body': '''
+<h2>Enviada como foto</h2>
+<p>Cuando envías una imagen de la forma habitual (galería o cámara), WhatsApp crea una copia nueva y comprimida. Esa copia normalmente pierde casi todos los datos EXIF, incluidas la ubicación GPS y el modelo de cámara, y las Content Credentials (C2PA). También baja la calidad, incluso con la opción HD.</p>
+
+<h2>Enviada como documento</h2>
+<p>Cuando adjuntas la imagen como <strong>documento</strong> para mantener la calidad, WhatsApp envía el archivo original byte a byte. Todo lo que lleva dentro viaja también: ubicación GPS, modelo del móvil, fechas, apps de edición y metadatos de IA.</p>
+
+<h2>Otras apps funcionan distinto</h2>
+<ul>
+<li><strong>Telegram:</strong> «foto» se comprime; «archivo» envía el original con todos sus metadatos.</li>
+<li><strong>Correo, enlaces de la nube y AirDrop:</strong> suelen enviar el archivo original.</li>
+<li><strong>Redes sociales:</strong> la mayoría quitan los metadatos de la copia pública, pero los leen antes al subirla.</li>
+</ul>
+
+<h2>Limpia la foto antes de enviarla</h2>
+<ol>
+<li>Abre <a href="/es/#images">iacleaner.com → Imágenes</a> en el navegador del móvil.</li>
+<li>Elige la foto, mira lo que contiene y toca <strong>Descargar imagen limpia</strong>.</li>
+<li>Envía la copia limpia, como foto o como documento: máxima calidad y sin metadatos.</li>
+</ol>
+<p>No se sube nada: la foto se limpia en tu móvil.</p>
+
+<h2>¿Se pueden ver los metadatos de una foto que te han enviado?</h2>
+<p>Si llegó como foto normal de WhatsApp, normalmente queda poco más que el tamaño. Si llegó como documento, arrástrala a IA Cleaner para ver todo lo que contiene.</p>
+'''},
+ },
+ {
+  'id': 'viewer',
+  'en': {
+   'slug': 'view-metadata-online',
+   'title': 'How to view the metadata of a photo, PDF or video online',
+   'seo_title': 'View Metadata Online: Photo (EXIF, GPS), PDF & Video Metadata Viewer — Free',
+   'desc': 'See every metadata block in a JPG, PNG, WebP, PDF, Word file or MP4: EXIF, GPS, XMP, C2PA Content Credentials, author and AI tags. Free, in your browser, nothing uploaded.',
+   'lead': 'Want to know what a file says about you before sharing it? IA Cleaner works as a metadata viewer: drop any photo, document or video and it lists everything hidden inside — and you decide whether to download a clean copy.',
+   'cta': 'images', 'mins': 3,
+   'body': '''
+<h2>What you will see</h2>
+<ul>
+<li><strong>Photos (JPG, PNG, WebP):</strong> EXIF (camera, dates, GPS), XMP, IPTC, comments, embedded prompts and C2PA Content Credentials.</li>
+<li><strong>Videos (MP4, MOV):</strong> location, device, XMP and Content Credentials.</li>
+<li><strong>PDF:</strong> title, author, creator, producer, dates and XMP.</li>
+<li><strong>Word, Excel, PowerPoint, OpenDocument:</strong> author, last modified by, company, application, template and editing time.</li>
+<li><strong>What the original reveals:</strong> a summary of the tool, author or account, AI use and edit history found in Content Credentials and XMP.</li>
+</ul>
+
+<h2>How to use it</h2>
+<ol>
+<li>Open the right tab: <a href="/#images">Images</a>, <a href="/#video">Video</a> or <a href="/#documents">Documents</a>.</li>
+<li>Drop the file. It is read in your browser — nothing is uploaded.</li>
+<li>Read the report. Entries related to AI are marked <strong>AI</strong>.</li>
+<li>If you only wanted to look, you are done. If you want to share the file without that data, click the download button for a clean copy.</li>
+</ol>
+
+<h2>Why “no metadata” can be meaningful</h2>
+<p>Screenshots and files downloaded from social networks or messaging apps usually arrive without metadata. An empty report doesn’t tell you who made a file — it tells you the information has already been removed somewhere along the way. See <a href="/guides/check-if-image-is-ai-metadata/">how to tell if an image was made with AI</a>.</p>
+'''},
+  'es': {
+   'slug': 'ver-metadatos-online',
+   'title': 'Cómo ver los metadatos de una foto, un PDF o un vídeo online',
+   'seo_title': 'Ver metadatos online gratis: fotos (EXIF, GPS), PDF, Word y vídeo',
+   'desc': 'Mira todos los metadatos de un JPG, PNG, WebP, PDF, Word o MP4: EXIF, GPS, XMP, Content Credentials (C2PA), autor y etiquetas de IA. Gratis, en tu navegador y sin subir nada.',
+   'lead': '¿Quieres saber qué dice un archivo de ti antes de compartirlo? IA Cleaner funciona como visor de metadatos: arrastra cualquier foto, documento o vídeo y te muestra todo lo que lleva escondido. Luego decides si descargas una copia limpia.',
+   'cta': 'images', 'mins': 3,
+   'body': '''
+<h2>Qué vas a ver</h2>
+<ul>
+<li><strong>Fotos (JPG, PNG, WebP):</strong> EXIF (cámara, fechas, GPS), XMP, IPTC, comentarios, prompts incrustados y Content Credentials (C2PA).</li>
+<li><strong>Vídeos (MP4, MOV):</strong> ubicación, dispositivo, XMP y Content Credentials.</li>
+<li><strong>PDF:</strong> título, autor, creador, productor, fechas y XMP.</li>
+<li><strong>Word, Excel, PowerPoint, OpenDocument:</strong> autor, última modificación por, empresa, aplicación, plantilla y tiempo de edición.</li>
+<li><strong>Lo que el original revela:</strong> un resumen de la herramienta, el autor o la cuenta, el uso de IA y el historial de ediciones que haya en las Content Credentials y el XMP.</li>
+</ul>
+
+<h2>Cómo usarlo</h2>
+<ol>
+<li>Abre la pestaña adecuada: <a href="/es/#images">Imágenes</a>, <a href="/es/#video">Vídeo</a> o <a href="/es/#documents">Documentos</a>.</li>
+<li>Arrastra el archivo. Se lee en tu navegador: no se sube nada.</li>
+<li>Lee el informe. Las entradas relacionadas con IA aparecen marcadas con <strong>IA</strong>.</li>
+<li>Si solo querías mirar, ya está. Si quieres compartir el archivo sin esos datos, pulsa el botón de descarga para obtener una copia limpia.</li>
+</ol>
+
+<h2>Por qué «sin metadatos» también dice algo</h2>
+<p>Las capturas de pantalla y los archivos descargados de redes sociales o apps de mensajería suelen llegar sin metadatos. Un informe vacío no te dice quién hizo un archivo: te dice que esa información ya se eliminó por el camino. Mira <a href="/es/guias/saber-si-imagen-es-ia-metadatos/">cómo saber si una imagen está hecha con IA</a>.</p>
 '''},
  },
 ]
