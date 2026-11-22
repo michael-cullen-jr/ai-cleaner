@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#3f5a7d">
 <link rel="icon" href="/logo-96.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "TechArticle", "headline": "How to remove C2PA / Content Credentials from an image", "description": "What C2PA Content Credentials are, how to check if your image has them, and how to remove them for free without losing quality.", "inLanguage": "en", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "url": "https://iacleaner.com/guides/remove-c2pa-content-credentials/", "image": "https://iacleaner.com/logo.webp", "author": {"@type": "Organization", "name": "IA Cleaner", "url": "https://iacleaner.com/"}, "publisher": {"@type": "Organization", "name": "IA Cleaner", "logo": {"@type": "ImageObject", "url": "https://iacleaner.com/logo.webp"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "IA Cleaner", "item": "https://iacleaner.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://iacleaner.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "How to remove C2PA / Content Credentials from an image", "item": "https://iacleaner.com/guides/remove-c2pa-content-credentials/"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "TechArticle", "headline": "How to remove C2PA / Content Credentials from an image", "description": "What C2PA Content Credentials are, how to check if your image has them, and how to remove them for free without losing quality.", "inLanguage": "en", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "url": "https://iacleaner.com/guides/remove-c2pa-content-credentials/", "image": "https://iacleaner.com/logo.webp", "author": {"@type": "Organization", "name": "IA Cleaner", "url": "https://iacleaner.com/"}, "publisher": {"@type": "Organization", "name": "IA Cleaner", "logo": {"@type": "ImageObject", "url": "https://iacleaner.com/logo.webp"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "IA Cleaner", "item": "https://iacleaner.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://iacleaner.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "How to remove C2PA / Content Credentials from an image", "item": "https://iacleaner.com/guides/remove-c2pa-content-credentials/"}]}]</script>
 <style>
 :root{--bg:#f5f7fa;--surface:#fff;--surface-2:#f0f3f7;--ink:#24344b;--muted:#6c7a8e;--faint:#9aa6b6;--line:#e2e7ee;--brand:#3f5a7d;--brand-2:#5a78a0;--brand-soft:#e7edf5;--shadow:0 1px 2px rgba(36,52,75,.04),0 8px 28px rgba(36,52,75,.06)}
 *{box-sizing:border-box}
@@ -36,6 +36,8 @@ main{max-width:740px;margin:0 auto;padding:20px 24px 40px}
 .crumbs a{color:var(--muted);text-decoration:none}
 h1{font-size:clamp(28px,4.5vw,40px);line-height:1.18;letter-spacing:-.03em;margin:0 0 14px}
 .lead{font-size:18px;color:var(--muted);margin:0 0 10px}
+.quick{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:12px;padding:14px 18px;margin:6px 0 20px;font-size:16.5px;line-height:1.65}
+.quick strong{color:var(--ink)}
 .meta{font-size:13px;color:var(--faint);margin-bottom:26px}
 article h2{font-size:23px;letter-spacing:-.02em;margin:36px 0 10px}
 article li{margin:6px 0}
@@ -67,7 +69,8 @@ footer{text-align:center;color:var(--faint);font-size:12.5px;padding:24px 24px 4
 <article>
 <h1>How to remove C2PA / Content Credentials from an image</h1>
 <p class="lead">Images made or edited with AI tools often carry a hidden, signed record of how they were created. Here is what it is, how to check for it and how to remove it.</p>
-<div class="meta">Updated 2026-11-18 · 4 min read</div>
+<div class="meta">Updated 2026-11-22 · 4 min read</div>
+
 <div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>Clean your files in seconds</strong><span>Free, no sign-up, and everything runs in your browser — nothing is uploaded.</span></div><a class="btn" href="/#images">Open IA Cleaner</a></div>
 <h2>What is C2PA?</h2>
 <p><strong>C2PA</strong> (Coalition for Content Provenance and Authenticity) is an open standard for attaching a <em>provenance record</em> to a file. Adobe calls it <strong>Content Credentials</strong>. The record — called a <em>manifest</em> — is cryptographically signed and can say which app created the image, whether AI was used and what edits were made.</p>
@@ -104,6 +107,7 @@ footer{text-align:center;color:var(--faint);font-size:12.5px;padding:24px 24px 4
 
 <h2>What removing C2PA does not do</h2>
 <p>Some AI images also carry <strong>invisible watermarks</strong> woven into the pixels themselves (for example Google’s SynthID). These are not metadata, so no metadata tool can remove them. And if a platform, publication or law requires you to disclose AI use, removing metadata doesn’t change that obligation.</p>
+<p><strong>Using Photoshop?</strong> See <a href="/guides/photoshop-content-credentials-edit-history/">what Photoshop’s Content Credentials reveal about your edits</a> and which settings to check before exporting.</p>
 <div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>Clean your files in seconds</strong><span>Free, no sign-up, and everything runs in your browser — nothing is uploaded.</span></div><a class="btn" href="/#images">Open IA Cleaner</a></div>
 </article>
 <h2>More guides</h2>

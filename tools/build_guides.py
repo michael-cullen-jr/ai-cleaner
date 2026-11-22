@@ -7,7 +7,7 @@ import html, json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://iacleaner.com'
-UPDATED = '2026-11-18'
+UPDATED = '2026-11-22'
 
 T = {
   'en': {'home': '/', 'guides': '/guides/', 'guides_name': 'Guides', 'open': 'Open IA Cleaner', 'files': '/#images',
@@ -36,6 +36,8 @@ GUIDES = [
    'desc': 'Instagram and Facebook read C2PA and IPTC metadata to add the “AI info” label — even to real photos with small AI edits. Here is how to check and clean your image before posting.',
    'lead': 'Posted a real photo and Instagram tagged it with “AI info”? It is usually not the pixels — it is the metadata your editing app wrote into the file. Here is how it works and how to clean it.',
    'cta': 'images', 'mins': 5,
+   'quick': 'Instagram shows “AI info” when the file carries metadata (C2PA or IPTC) saying it was made or edited with AI — even a small retouch — or when you mark it yourself. To avoid it, clean the file before uploading: drop it into IA Cleaner, download the clean copy and post that one. On a post that is already up it usually can’t be removed — you have to upload it again.',
+   'also': '<h2>Stories and reels</h2>\n<p>It works the same way: Instagram reads the metadata of whatever file you upload, whether it is a post, a story or a reel. For a story, clean the photo in <a href="/#images">IA Cleaner → Images</a> and upload it from your gallery. For a reel, clean the video in <a href="/#video">IA Cleaner → Video</a>: Content Credentials are removed without re-encoding. If you edit inside Instagram with its own AI features, the app itself may add the label.</p>',
    'body': '''
 <h2>What is the “AI info” label?</h2>
 <p>Meta adds an <strong>“AI info”</strong> label (formerly “Made with AI”) to posts, Reels and Stories on Instagram, Facebook and Threads when it believes an image was created or modified with AI. Depending on the case it appears under your username or in the post’s menu.</p>
@@ -72,10 +74,12 @@ GUIDES = [
   'es': {
    'slug': 'etiqueta-ia-instagram',
    'title': 'Por qué Instagram pone «Información de IA» en tu foto y cómo quitar los metadatos que la activan',
-   'seo_title': 'Etiqueta «Información de IA» en Instagram: por qué sale y cómo quitarla',
-   'desc': '¿Instagram marca tu foto, publicación o historia con «Información de IA»? Suele deberse a metadatos C2PA o IPTC. Compruébalo y quítalos gratis en tu navegador, sin subir la foto. Guía paso a paso.',
+   'seo_title': '¿Cómo quitar «Información de IA» en Instagram? Fotos, historias y reels',
+   'desc': '¿Instagram pone «Información de IA» en tu foto, historia o reel? Suele deberse a metadatos C2PA o IPTC del archivo. Compruébalo y quítalos gratis antes de publicar, sin subir nada. Respuesta en 1 minuto.',
    'lead': '¿Has subido una foto real e Instagram la ha marcado con «Información de IA»? Normalmente no son los píxeles: son los metadatos que tu app de edición escribió en el archivo. Te explicamos cómo funciona y cómo limpiarlo.',
    'cta': 'images', 'mins': 5,
+   'quick': 'Instagram muestra «Información de IA» cuando el archivo lleva metadatos (C2PA o IPTC) que dicen que se creó o editó con IA, aunque sea un retoque pequeño, o cuando lo indicas tú. Para evitarlo, limpia el archivo antes de subirlo: arrástralo a IA Cleaner, descarga la copia limpia y publica esa. En una publicación ya subida normalmente no se puede quitar: hay que volver a subirla.',
+   'also': '<h2>Historias y reels</h2>\n<p>Funciona igual: Instagram lee los metadatos del archivo que subes, sea una publicación, una historia o un reel. Para una historia, limpia la foto en <a href="/es/#images">IA Cleaner → Imágenes</a> y súbela desde la galería. Para un reel, limpia el vídeo en <a href="/es/#video">IA Cleaner → Vídeo</a>: se quitan las Content Credentials sin volver a codificarlo. Si editas dentro de Instagram con sus funciones de IA, la etiqueta puede ponerla la propia app.</p>',
    'body': '''
 <h2>¿Qué es la etiqueta «Información de IA»?</h2>
 <p>Meta añade la etiqueta <strong>«Información de IA»</strong> (antes «Hecho con IA») a publicaciones, reels e historias de Instagram, Facebook y Threads cuando cree que una imagen se ha creado o modificado con IA. Según el caso, aparece bajo tu nombre de usuario o en el menú de la publicación.</p>
@@ -119,6 +123,7 @@ GUIDES = [
    'desc': 'TikTok reads C2PA Content Credentials in the photos and videos you upload to add the “AI-generated” label automatically. Here is how to check your images (JPG, PNG) and videos (MP4, MOV) and clean them before posting.',
    'lead': 'Posted a photo, a carousel or a video and TikTok tagged it “AI-generated” even though you only used AI for a small part of it? The label is often triggered by metadata inside the file. Here is how it works and how to clean it.',
    'cta': 'images', 'mins': 5,
+   'quick': 'TikTok adds “AI-generated” automatically when the file carries Content Credentials (C2PA) saying it was made or edited with AI, or when you mark it yourself. If it comes from the metadata, upload a clean copy: drop the photo or video into IA Cleaner, download the copy without metadata and post that one. On a post that is already up it usually can’t be removed — you have to upload it again. If you marked it yourself or TikTok detects AI another way, cleaning metadata won’t change it.',
    'body': '''
 <h2>What is TikTok’s “AI-generated” label?</h2>
 <p>TikTok shows an <strong>“AI-generated”</strong> label on videos and photos that were created or significantly edited with AI. It can appear because you turned on the AI-generated content setting yourself, because the content was made with TikTok’s own AI effects, or because TikTok detected it automatically.</p>
@@ -157,10 +162,11 @@ GUIDES = [
   'es': {
    'slug': 'etiqueta-ia-tiktok',
    'title': 'Por qué TikTok marca tu foto o vídeo como «Generado por IA» y cómo quitar los metadatos que lo activan',
-   'seo_title': 'Etiqueta «Generado por IA» en TikTok: por qué sale y cómo quitarla',
-   'desc': '¿TikTok marca tu foto o vídeo como «Generado por IA»? Suele deberse a metadatos C2PA. Compruébalo y límpialos gratis, sin perder calidad y sin subir el archivo.',
+   'seo_title': '¿Cómo quitar la etiqueta «Generado por IA» de TikTok? Por qué sale y qué hacer',
+   'desc': 'TikTok pone «Generado por IA» cuando tu foto o vídeo lleva metadatos C2PA de IA. Compruébalo y quítalos gratis antes de publicar, sin perder calidad ni subir el archivo. Respuesta en 1 minuto.',
    'lead': '¿Has subido una foto, un carrusel o un vídeo y TikTok lo ha marcado como «Generado por IA» aunque solo usaste la IA para una parte pequeña? Muchas veces la etiqueta la activan los metadatos del archivo. Te explicamos cómo funciona y cómo limpiarlo.',
    'cta': 'images', 'mins': 5,
+   'quick': 'TikTok añade «Generado por IA» automáticamente cuando el archivo lleva Content Credentials (C2PA) que indican que se creó o editó con IA, o cuando lo marcas tú al publicar. Si viene de los metadatos, sube una copia limpia: arrastra la foto o el vídeo a IA Cleaner, descarga la copia sin metadatos y publica esa. En una publicación ya subida normalmente no se puede quitar: hay que volver a subirla. Si la marcaste tú o TikTok la detecta por otros medios, limpiar los metadatos no la cambia.',
    'body': '''
 <h2>¿Qué es la etiqueta «Generado por IA» de TikTok?</h2>
 <p>TikTok muestra la etiqueta <strong>«Generado por IA»</strong> en vídeos y fotos creados o muy editados con IA. Puede aparecer porque tú activaste el ajuste de contenido generado por IA, porque usaste los efectos de IA de TikTok o porque TikTok lo detectó automáticamente.</p>
@@ -206,6 +212,7 @@ GUIDES = [
    'desc': 'What C2PA Content Credentials are, how to check if your image has them, and how to remove them for free without losing quality.',
    'lead': 'Images made or edited with AI tools often carry a hidden, signed record of how they were created. Here is what it is, how to check for it and how to remove it.',
    'cta': 'images', 'mins': 4,
+   'also': '<p><strong>Using Photoshop?</strong> See <a href="/guides/photoshop-content-credentials-edit-history/">what Photoshop’s Content Credentials reveal about your edits</a> and which settings to check before exporting.</p>',
    'body': '''
 <h2>What is C2PA?</h2>
 <p><strong>C2PA</strong> (Coalition for Content Provenance and Authenticity) is an open standard for attaching a <em>provenance record</em> to a file. Adobe calls it <strong>Content Credentials</strong>. The record — called a <em>manifest</em> — is cryptographically signed and can say which app created the image, whether AI was used and what edits were made.</p>
@@ -250,6 +257,7 @@ GUIDES = [
    'desc': 'Comprueba si tu imagen lleva Content Credentials (C2PA) de ChatGPT, Firefly u otras IA y elimínalas gratis en tu navegador. Sin registro, sin subir la imagen y sin perder calidad.',
    'lead': 'Las imágenes creadas o editadas con herramientas de IA suelen llevar un registro oculto y firmado de cómo se hicieron. Te explicamos qué es, cómo detectarlo y cómo quitarlo.',
    'cta': 'images', 'mins': 4,
+   'also': '<p><strong>¿Usas Photoshop?</strong> Mira <a href="/es/guias/photoshop-content-credentials-historial/">qué revelan las Content Credentials de Photoshop sobre tus ediciones</a> y qué ajustes revisar antes de exportar.</p>',
    'body': '''
 <h2>¿Qué es C2PA?</h2>
 <p><strong>C2PA</strong> (Coalition for Content Provenance and Authenticity) es un estándar abierto para añadir a un archivo un <em>registro de procedencia</em>. Adobe lo llama <strong>Content Credentials</strong> («credenciales de contenido»). Ese registro —el <em>manifiesto</em>— va firmado criptográficamente y puede indicar qué aplicación creó la imagen, si se usó IA y qué ediciones se hicieron.</p>
@@ -293,10 +301,11 @@ GUIDES = [
   'en': {
    'slug': 'photoshop-content-credentials-edit-history',
    'title': 'What Photoshop Content Credentials reveal about your edits — and how to remove them',
-   'seo_title': 'Photoshop Content Credentials: What Edit History They Show & How to Remove It',
+   'seo_title': 'Photoshop Content Credentials: Do They Show Every Edit? What Clients Can See',
    'desc': 'Content Credentials from Photoshop can show your name, the tools you used, a summary of your edits, placed images and any generative AI use. See exactly what your file reveals and remove it before sending it to a client.',
    'lead': 'Exported a design and worried your client will see your messy process? Here is what Photoshop’s Content Credentials and edit log actually store, what you can control inside Photoshop, and how to check and clean the exported file.',
    'cta': 'images', 'mins': 6,
+   'quick': 'No. Content Credentials store a summary of edit types — “colour adjustments”, “cropped”, “placed another image” — not every step. They can also include the app, your name or connected accounts, the images you placed and whether you used generative AI. You can’t hide single edits: you can turn off whole categories or the feature in Photoshop, or remove the credentials from the exported file with IA Cleaner.',
    'body': '''
 <h2>What Photoshop can store in an exported image</h2>
 <ul>
@@ -332,10 +341,11 @@ GUIDES = [
   'es': {
    'slug': 'photoshop-content-credentials-historial',
    'title': 'Qué revelan las Content Credentials de Photoshop sobre tus ediciones y cómo quitarlas',
-   'seo_title': 'Content Credentials de Photoshop: qué historial de ediciones muestran y cómo quitarlo',
+   'seo_title': 'Content Credentials de Photoshop: ¿muestran cada edición? Lo que ve tu cliente',
    'desc': 'Las Content Credentials de Photoshop pueden mostrar tu nombre, las herramientas que usaste, un resumen de tus ediciones, las imágenes colocadas y si usaste IA generativa. Mira qué revela tu archivo y quítalo antes de enviarlo a un cliente.',
    'lead': '¿Has exportado un diseño y te preocupa que tu cliente vea tu proceso? Esto es lo que guardan de verdad las Content Credentials y el registro de historia de Photoshop, qué puedes controlar desde Photoshop y cómo revisar y limpiar el archivo exportado.',
    'cta': 'images', 'mins': 6,
+   'quick': 'No. Las Content Credentials guardan un resumen por tipos de edición («ajustes de color», «recortado», «colocó otra imagen»), no cada paso. También pueden incluir la aplicación, tu nombre o tus cuentas conectadas, las imágenes que colocaste y si usaste IA generativa. No se pueden ocultar ediciones una a una: puedes desactivar categorías enteras o la función en Photoshop, o quitar las credenciales del archivo exportado con IA Cleaner.',
    'body': '''
 <h2>Qué puede guardar Photoshop en una imagen exportada</h2>
 <ul>
@@ -584,6 +594,8 @@ GUIDES = [
    'desc': 'Word, PowerPoint, Excel and PDF files created by Claude are generated with code libraries that leave tell-tale metadata such as “python-pptx”, “PptxGenJS” or “ReportLab”. See the exact values and remove them for free.',
    'lead': 'When Claude creates a Word document, a PowerPoint presentation, a spreadsheet or a PDF, it writes the file with open-source code libraries. Those libraries fill in the document properties with their own names and default dates. Here is what to look for and how to clean it.',
    'cta': 'documents', 'mins': 5,
+   'quick': 'Files Claude creates don’t say “Claude”, but the libraries used to generate them leave their own traces: names such as python-docx, python-pptx, PptxGenJS or ReportLab, dates from 2013 and authors like “Steve Canny”. IA Cleaner removes them without changing your content.',
+   'also': '<h2>Who is “Steve Canny”?</h2>\n<p>He is the author of the python-pptx library. His name is saved as “last modified by” in presentations generated with the library’s default template, so it shows up in files he had nothing to do with. Seeing it is a sign the file was generated by code.</p>\n<h2>Files from ChatGPT and other assistants</h2>\n<p>ChatGPT and other assistants that create files by running code usually rely on the same Python libraries, so their Word, PowerPoint, Excel and PDF files can carry the same traces. The cleaning works the same way. For the wider picture, see <a href="/guides/remove-ai-traces-documents-emails/">AI traces in documents and emails</a>.</p>',
    'body': '''
 <h2>Why these files have unusual metadata</h2>
 <p>Claude doesn’t open Word or PowerPoint. It runs code that builds the file, typically with libraries such as python-docx, python-pptx, openpyxl, ReportLab, docx (JavaScript) or PptxGenJS. Each library leaves its own defaults in the document properties. We generated files with each of them and found these values:</p>
@@ -619,6 +631,8 @@ GUIDES = [
    'desc': 'Los Word, PowerPoint, Excel y PDF que crea Claude se generan con librerías de código que dejan metadatos delatores como «python-pptx», «PptxGenJS» o «ReportLab». Mira los valores exactos y bórralos gratis.',
    'lead': 'Cuando Claude crea un documento de Word, una presentación de PowerPoint, una hoja de cálculo o un PDF, escribe el archivo con librerías de código abierto. Esas librerías rellenan las propiedades del documento con su propio nombre y fechas por defecto. Esto es lo que debes buscar y cómo limpiarlo.',
    'cta': 'documents', 'mins': 5,
+   'quick': 'Los archivos que crea Claude no dicen «Claude», pero las librerías con las que se generan dejan sus propias huellas: nombres como python-docx, python-pptx, PptxGenJS o ReportLab, fechas de 2013 y autores como «Steve Canny». IA Cleaner los borra sin cambiar tu contenido.',
+   'also': '<h2>¿Quién es «Steve Canny»?</h2>\n<p>Es el autor de la librería python-pptx. Su nombre se guarda como «última modificación por» en las presentaciones generadas con la plantilla por defecto de la librería, así que aparece en archivos con los que no tiene nada que ver. Verlo indica que el archivo se generó con código.</p>\n<h2>Archivos de ChatGPT y otros asistentes</h2>\n<p>ChatGPT y otros asistentes que crean archivos ejecutando código suelen usar las mismas librerías de Python, así que sus Word, PowerPoint, Excel y PDF pueden llevar las mismas huellas. La limpieza funciona igual. Para el panorama completo, mira <a href="/es/guias/quitar-rastros-ia-documentos-correos/">rastros de IA en documentos y correos</a>.</p>',
    'body': '''
 <h2>Por qué estos archivos tienen metadatos raros</h2>
 <p>Claude no abre Word ni PowerPoint. Ejecuta código que construye el archivo, normalmente con librerías como python-docx, python-pptx, openpyxl, ReportLab, docx (JavaScript) o PptxGenJS. Cada una deja sus valores por defecto en las propiedades del documento. Hemos generado archivos con cada una y estos son los valores que aparecen:</p>
@@ -657,6 +671,7 @@ GUIDES = [
    'desc': 'See what metadata a PDF contains (author, creator app, dates, XMP) and remove it for free, without Acrobat and without uploading the file.',
    'lead': 'Every PDF carries information about who made it and with what software. Here is what is inside, why it matters and how to strip it without uploading your file anywhere.',
    'cta': 'documents', 'mins': 4,
+   'also': '<p><strong>Polished the text with ChatGPT, Claude or Copilot?</strong> See <a href="/guides/remove-ai-traces-documents-emails/">AI traces in documents and emails</a>: metadata, embedded AI images and copy-paste leftovers.</p>',
    'body': '''
 <h2>What metadata does a PDF contain?</h2>
 <ul>
@@ -691,6 +706,7 @@ GUIDES = [
    'desc': 'Mira qué metadatos tiene tu PDF (autor, programa, fechas, XMP) y bórralos gratis en tu navegador: sin Acrobat, sin registro y sin subir el archivo.',
    'lead': 'Todo PDF lleva información sobre quién lo hizo y con qué programa. Te contamos qué contiene, por qué importa y cómo eliminarla sin subir tu archivo a ningún sitio.',
    'cta': 'documents', 'mins': 4,
+   'also': '<p><strong>¿Has pulido el texto con ChatGPT, Claude o Copilot?</strong> Mira <a href="/es/guias/quitar-rastros-ia-documentos-correos/">rastros de IA en documentos y correos</a>: metadatos, imágenes de IA incrustadas y restos de copiar y pegar.</p>',
    'body': '''
 <h2>¿Qué metadatos tiene un PDF?</h2>
 <ul>
@@ -874,6 +890,7 @@ GUIDES = [
    'desc': 'A .docx file stores the author, company, last editor, editing time and template. Here is how to see and remove that metadata for free, with or without Word.',
    'lead': 'Send a Word file and you may also be sending your full name, your company, who edited it last and how long you spent on it. Here is what a .docx stores and how to remove it — with Word’s own inspector or in your browser.',
    'cta': 'documents', 'mins': 5,
+   'also': '<p><strong>Polished the text with ChatGPT, Claude or Copilot?</strong> See <a href="/guides/remove-ai-traces-documents-emails/">AI traces in documents and emails</a>: metadata, embedded AI images and copy-paste leftovers.</p>',
    'body': '''
 <h2>What metadata a Word file contains</h2>
 <ul>
@@ -910,6 +927,7 @@ GUIDES = [
    'desc': 'Los archivos de Word, Excel y PowerPoint guardan el autor, la empresa, quién los editó por última vez, el tiempo de edición y la plantilla. Así puedes ver y eliminar esos metadatos online gratis, con o sin Office.',
    'lead': 'Si envías un Word, puede que también estés enviando tu nombre completo, tu empresa, quién lo editó por última vez y cuánto tiempo le dedicaste. Esto es lo que guarda un .docx y cómo quitarlo, con el inspector de Word o desde el navegador.',
    'cta': 'documents', 'mins': 5,
+   'also': '<p><strong>¿Has pulido el texto con ChatGPT, Claude o Copilot?</strong> Mira <a href="/es/guias/quitar-rastros-ia-documentos-correos/">rastros de IA en documentos y correos</a>: metadatos, imágenes de IA incrustadas y restos de copiar y pegar.</p>',
    'body': '''
 <h2>Qué metadatos tiene un archivo de Word</h2>
 <ul>
@@ -1430,6 +1448,8 @@ main{max-width:740px;margin:0 auto;padding:20px 24px 40px}
 .crumbs a{color:var(--muted);text-decoration:none}
 h1{font-size:clamp(28px,4.5vw,40px);line-height:1.18;letter-spacing:-.03em;margin:0 0 14px}
 .lead{font-size:18px;color:var(--muted);margin:0 0 10px}
+.quick{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:12px;padding:14px 18px;margin:6px 0 20px;font-size:16.5px;line-height:1.65}
+.quick strong{color:var(--ink)}
 .meta{font-size:13px;color:var(--faint);margin-bottom:26px}
 article h2{font-size:23px;letter-spacing:-.02em;margin:36px 0 10px}
 article li{margin:6px 0}
@@ -1502,6 +1522,11 @@ def cta(lang, kind):
     return (f'<div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>{t["cta_title"]}</strong><span>{t["cta_text"]}</span></div>'
             f'<a class="btn" href="{href}">{t["open"]}</a></div>')
 
+def quick_box(lang, c):
+    if not c.get('quick'): return ''
+    label = 'Short answer:' if lang == 'en' else 'Respuesta rápida:'
+    return f'<div class="quick"><strong>{label}</strong> {e(c["quick"])}</div>'
+
 def url_of(lang, g):
     return f"{T[lang]['guides']}{g[lang]['slug']}/"
 
@@ -1526,8 +1551,10 @@ for g in GUIDES:
 <h1>{e(c['title'])}</h1>
 <p class="lead">{e(c['lead'])}</p>
 <div class="meta">{t['updated']} {UPDATED} · {c['mins']} {t['read']}</div>
+{quick_box(lang, c)}
 {cta(lang, c['cta'])}
 {c['body'].strip()}
+{c.get('also', '').strip()}
 {cta(lang, c['cta'])}
 </article>
 <h2>{t['related']}</h2>

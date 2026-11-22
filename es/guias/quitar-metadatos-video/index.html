@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#3f5a7d">
 <link rel="icon" href="/logo-96.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Cómo quitar los metadatos de un vídeo (MP4 y MOV)", "description": "Los vídeos guardan la ubicación GPS, el modelo del móvil, las apps de edición y las Content Credentials (C2PA) de la IA. Bórralos online gratis, sin recodificar y sin subir el vídeo.", "inLanguage": "es", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "url": "https://iacleaner.com/es/guias/quitar-metadatos-video/", "image": "https://iacleaner.com/logo.webp", "author": {"@type": "Organization", "name": "IA Cleaner", "url": "https://iacleaner.com/es/"}, "publisher": {"@type": "Organization", "name": "IA Cleaner", "logo": {"@type": "ImageObject", "url": "https://iacleaner.com/logo.webp"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "IA Cleaner", "item": "https://iacleaner.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://iacleaner.com/es/guias/"}, {"@type": "ListItem", "position": 3, "name": "Cómo quitar los metadatos de un vídeo (MP4 y MOV)", "item": "https://iacleaner.com/es/guias/quitar-metadatos-video/"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Cómo quitar los metadatos de un vídeo (MP4 y MOV)", "description": "Los vídeos guardan la ubicación GPS, el modelo del móvil, las apps de edición y las Content Credentials (C2PA) de la IA. Bórralos online gratis, sin recodificar y sin subir el vídeo.", "inLanguage": "es", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "url": "https://iacleaner.com/es/guias/quitar-metadatos-video/", "image": "https://iacleaner.com/logo.webp", "author": {"@type": "Organization", "name": "IA Cleaner", "url": "https://iacleaner.com/es/"}, "publisher": {"@type": "Organization", "name": "IA Cleaner", "logo": {"@type": "ImageObject", "url": "https://iacleaner.com/logo.webp"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "IA Cleaner", "item": "https://iacleaner.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://iacleaner.com/es/guias/"}, {"@type": "ListItem", "position": 3, "name": "Cómo quitar los metadatos de un vídeo (MP4 y MOV)", "item": "https://iacleaner.com/es/guias/quitar-metadatos-video/"}]}]</script>
 <style>
 :root{--bg:#f5f7fa;--surface:#fff;--surface-2:#f0f3f7;--ink:#24344b;--muted:#6c7a8e;--faint:#9aa6b6;--line:#e2e7ee;--brand:#3f5a7d;--brand-2:#5a78a0;--brand-soft:#e7edf5;--shadow:0 1px 2px rgba(36,52,75,.04),0 8px 28px rgba(36,52,75,.06)}
 *{box-sizing:border-box}
@@ -36,6 +36,8 @@ main{max-width:740px;margin:0 auto;padding:20px 24px 40px}
 .crumbs a{color:var(--muted);text-decoration:none}
 h1{font-size:clamp(28px,4.5vw,40px);line-height:1.18;letter-spacing:-.03em;margin:0 0 14px}
 .lead{font-size:18px;color:var(--muted);margin:0 0 10px}
+.quick{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:12px;padding:14px 18px;margin:6px 0 20px;font-size:16.5px;line-height:1.65}
+.quick strong{color:var(--ink)}
 .meta{font-size:13px;color:var(--faint);margin-bottom:26px}
 article h2{font-size:23px;letter-spacing:-.02em;margin:36px 0 10px}
 article li{margin:6px 0}
@@ -67,7 +69,8 @@ footer{text-align:center;color:var(--faint);font-size:12.5px;padding:24px 24px 4
 <article>
 <h1>Cómo quitar los metadatos de un vídeo (MP4 y MOV)</h1>
 <p class="lead">Un vídeo del móvil o de un generador de IA puede llevar dónde se grabó, con qué dispositivo o app se hizo y un registro de procedencia que dice que se generó con IA. Esto es lo que contiene un MP4 o MOV y cómo eliminarlo sin perder calidad.</p>
-<div class="meta">Actualizado 2026-11-18 · 5 min de lectura</div>
+<div class="meta">Actualizado 2026-11-22 · 5 min de lectura</div>
+
 <div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>Limpia tus archivos en segundos</strong><span>Gratis, sin registro y todo se procesa en tu navegador: no se sube nada.</span></div><a class="btn" href="/es/#video">Abrir IA Cleaner</a></div>
 <h2>Qué metadatos tiene un vídeo</h2>
 <ul>
@@ -100,6 +103,7 @@ footer{text-align:center;color:var(--faint);font-size:12.5px;padding:24px 24px 4
 <li><strong>ffmpeg:</strong> <code>ffmpeg -i entrada.mp4 -map_metadata -1 -c copy salida.mp4</code> quita la mayoría de metadatos globales sin recodificar, pero puede dejar datos por pista y no siempre elimina los bloques C2PA.</li>
 <li><strong>Volver a exportar</strong> desde un editor de vídeo suele quitar los metadatos originales, pero recodifica el vídeo y añade los del propio editor.</li>
 </ul>
+
 <div class="cta"><img src="/logo-96.webp" width="46" height="46" alt=""><div><strong>Limpia tus archivos en segundos</strong><span>Gratis, sin registro y todo se procesa en tu navegador: no se sube nada.</span></div><a class="btn" href="/es/#video">Abrir IA Cleaner</a></div>
 </article>
 <h2>Más guías</h2>
