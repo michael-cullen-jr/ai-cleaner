@@ -31,3 +31,7 @@ python tools/build_guides.py
 ## License
 
 [MIT](LICENSE). The logo and the "IA Cleaner" name are not covered by the license.
+
+## Notifying search engines (IndexNow)
+
+After publishing new or changed pages, run `python tools/indexnow.py` to send every sitemap URL to Bing and the other IndexNow engines (or pass specific URLs as arguments). The key file in the site root must stay published.
