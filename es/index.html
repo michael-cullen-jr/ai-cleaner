@@ -177,6 +177,9 @@
   .dl-txt{flex:1;min-width:180px}
   .dl-txt strong{display:block;color:var(--ink);font-size:15.5px;font-weight:600}
   .dl-txt span{display:block;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere;margin-top:2px}
+  .fb{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;color:var(--muted)}
+  .fb button{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:3px 10px;font-size:15px;cursor:pointer;line-height:1.4}
+  .fb button:hover{border-color:var(--brand-2)}
   .btn-dl{padding:13px 22px;font-size:15px;background:var(--ok);box-shadow:0 6px 18px rgba(63,125,104,.3)}
   .btn-dl:hover{background:#346b59}
   details.removed{margin-top:12px}
@@ -320,7 +323,7 @@
   </section>
   <section class="faq" id="faq">
     <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
-    <details><summary data-i18n="faq.q1">¿Se suben mis archivos a algún sitio?</summary><p data-i18n="faq.a1">No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas con Cloudflare Web Analytics, que no usa cookies.</p></details>
+    <details><summary data-i18n="faq.q1">¿Se suben mis archivos a algún sitio?</summary><p data-i18n="faq.a1">No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas (Cloudflare Web Analytics y GoatCounter, ambos sin cookies) y eventos anónimos como «se limpió una imagen» o «se pulsó descargar». Nunca se envían nombres ni contenidos de archivos.</p></details>
     <details><summary data-i18n="faq.q2">¿Qué es C2PA / Content Credentials?</summary><p data-i18n="faq.a2">C2PA es un estándar que incrusta en una imagen o documento un registro firmado que dice cómo se creó; por ejemplo, que se generó con DALL·E, Firefly o Midjourney. IA Cleaner elimina ese manifiesto junto con los metadatos EXIF, XMP e IPTC.</p></details>
     <details><summary data-i18n="faq.q3">¿Por qué el texto copiado de ChatGPT tiene caracteres ocultos?</summary><p data-i18n="faq.a3">El texto copiado de chats de IA puede incluir caracteres invisibles (espacios de ancho cero, espacios especiales, marcadores de uso privado) y restos como <code>contentReference[oaicite:0]</code> o <code>utm_source=chatgpt.com</code>. IA Cleaner los resalta y los elimina.</p></details>
     <details><summary data-i18n="faq.q4">¿Pierden calidad mis imágenes?</summary><p data-i18n="faq.a4">No. Los JPG, PNG y WebP se limpian sin pérdida: solo se eliminan los bloques de metadatos y los píxeles no se tocan. Re-codificar es opcional.</p></details>
@@ -371,7 +374,7 @@ const UI_ES = {
   'guides.list': '<a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/metadatos-documentos-presentaciones-claude/"><strong>Documentos y presentaciones de Claude</strong><span>Los nombres de librerías y fechas que dejan en Word, PowerPoint y PDF.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a><a href="/es/guias/quitar-metadatos-video/"><strong>Quitar metadatos de un vídeo</strong><span>GPS, datos del móvil y Content Credentials en MP4 y MOV, sin recodificar.</span></a><a href="/es/guias/etiqueta-ia-samsung-galaxy/"><strong>Etiqueta de IA en Samsung Galaxy</strong><span>La marca visible y los metadatos de IA: qué es cada uno y qué puedes quitar.</span></a><a href="/es/guias/etiqueta-ia-facebook-x-linkedin/"><strong>Etiquetas de IA en Facebook, LinkedIn, X y YouTube</strong><span>Por qué aparecen y qué revisar antes de publicar.</span></a><a href="/es/guias/quitar-marca-de-agua-ia/"><strong>Marcas de agua de IA: qué se puede quitar</strong><span>C2PA, SynthID y texto de ChatGPT, explicado con honestidad.</span></a><a href="/es/guias/metadatos-fotos-whatsapp/"><strong>¿WhatsApp borra los metadatos?</strong><span>Foto o documento, y cómo enviar una copia limpia.</span></a><a href="/es/guias/ver-metadatos-online/"><strong>Ver metadatos online</strong><span>Mira lo que revela una foto, un PDF o un vídeo antes de compartirlo.</span></a>',
   'faq.title': 'Preguntas frecuentes',
   'faq.q1': '¿Se suben mis archivos a algún sitio?',
-  'faq.a1': 'No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas con Cloudflare Web Analytics, que no usa cookies.',
+  'faq.a1': 'No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas (Cloudflare Web Analytics y GoatCounter, ambos sin cookies) y eventos anónimos como «se limpió una imagen» o «se pulsó descargar». Nunca se envían nombres ni contenidos de archivos.',
   'faq.q2': '¿Qué es C2PA / Content Credentials?',
   'faq.a2': 'C2PA es un estándar que incrusta en una imagen o documento un registro firmado que dice cómo se creó; por ejemplo, que se generó con DALL·E, Firefly o Midjourney. IA Cleaner elimina ese manifiesto junto con los metadatos EXIF, XMP e IPTC.',
   'faq.q3': '¿Por qué el texto copiado de ChatGPT tiene caracteres ocultos?',
@@ -457,6 +460,7 @@ const ES = {
   'Lossless: only metadata is removed, pixels and colour profile stay the same.': 'Sin pérdida: solo se quitan los metadatos; los píxeles y el perfil de color no cambian.',
   'Lossless: frames are never re-encoded, so quality and size stay the same.': 'Sin pérdida: los fotogramas no se vuelven a codificar, así que la calidad y el tamaño no cambian.',
   'Author, company, software and AI-related properties are removed; your content stays the same.': 'Se quitan el autor, la empresa, el software y las propiedades relacionadas con IA; tu contenido no cambia.',
+  'Did it work?': '¿Te ha funcionado?', 'Thanks for letting us know!': '¡Gracias por decírnoslo!', 'Yes': 'Sí', 'No': 'No',
   'Download clean image': 'Descargar imagen limpia', 'Download clean document': 'Descargar documento limpio', 'Download clean file': 'Descargar archivo limpio',
   'What was removed': 'Qué se ha eliminado', 'ia-cleaner-files.zip': 'ia-cleaner-archivos.zip'
 };
@@ -489,6 +493,9 @@ function setLang(l){
 }
 // Remember an explicit language choice (the link itself navigates)
 document.addEventListener('click', e => { const a = e.target.closest('.lang a'); if (a){ try{ localStorage.setItem('iacleaner-lang', a.dataset.lang); }catch{} } });
+
+/* Anonymous usage events (GoatCounter): only an event name, never file names or contents */
+function track(name){ try{ if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: name, title: name, event: true}); }catch{} }
 
 /* Heavy libraries (PDF / Office) load only when a document needs them */
 const LIBS = {JSZip: 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js', PDFLib: 'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js'};
@@ -674,9 +681,11 @@ $('#txtClean').addEventListener('click', () => {
   if (!items.length) items.push('<li>✓ ' + tr('Nothing to clean — your text is already spotless.') + '</li>');
   $('#txtReport').innerHTML = items.join('');
   $('#txtOut').value = out;
+  track(report.length || inv.counts.size ? 'text-clean-found' : 'text-clean-nothing');
   $('#txtResult').scrollIntoView({behavior:'smooth', block:'start'});
 });
 $('#txtCopy').addEventListener('click', async () => {
+  track('text-copy');
   await navigator.clipboard.writeText($('#txtOut').value);
   $('#txtCopy').textContent = tr('Copied ✓'); setTimeout(() => $('#txtCopy').textContent = tr('Copy'), 1500);
 });
@@ -1357,15 +1366,19 @@ async function processFile(file){
         </button>
       </div>
       ${beforeAI.length ? `<div class="callout">${tr('AI traces found in the original:')} ${esc(beforeAI.join(', '))}</div>` : ''}
+      <div class="fb"><span>${tr('Did it work?')}</span><button type="button" data-v="yes" aria-label="${tr('Yes')}">👍</button><button type="button" data-v="no" aria-label="${tr('No')}">👎</button></div>
       ${revealHTML(reveal, revealAfter)}
       ${res.removed.length ? `<details class="removed" open><summary>${tr('What was removed')} (${res.removed.length})</summary><ul class="items">${res.removed.map(r => `<li><span class="k">${esc(r.name)}</span>${hasAI(r.name + ' ' + r.detail) ? `<span class="ai">${tr('AI')}</span>` : ''}${r.detail ? `<div class="d">${esc(r.detail)}</div>` : ''}</li>`).join('')}</ul></details>` : ''}
       ${(res.notes || []).map(n => `<p class="note">${esc(n)}</p>`).join('')}
       ${after.length ? `<p class="note warn">${tr('After cleaning, these words still appear in the file (they may be part of the visible content):')} ${esc(after.join(', '))}</p>` : ''}`;
-    card.querySelector('.btn-dl').onclick = () => download(blob, name);
+    card.querySelector('.btn-dl').onclick = () => { download(blob, name); track(`download-${what}`); };
+    track(`clean-${what}-ok`); if (beforeAI.length || reveal.found) track(`clean-${what}-ai-found`);
+    card.querySelectorAll('.fb button').forEach(b => b.onclick = () => { track(`feedback-${b.dataset.v}`); b.closest('.fb').innerHTML = `<span>${tr('Thanks for letting us know!')}</span>`; });
     if (results.length === 1) card.scrollIntoView({behavior: 'smooth', block: 'center'});
   }catch(e){
     console.error(e);
     card.innerHTML = head(file, '<span class="badge bad">Error</span>') + `<p class="note warn">${esc(e.message || e)}</p>`;
+    track(`clean-error-${(file.name.split('.').pop() || 'none').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 6) || 'none'}`);
   }
   $('#dlAll').hidden = results.length < 2;
 }
@@ -1378,6 +1391,7 @@ fileIn.onchange = () => { [...fileIn.files].forEach(processFile); fileIn.value =
 ['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
 drop.addEventListener('drop', e => [...e.dataTransfer.files].forEach(processFile));
 $('#dlAll').onclick = async () => {
+  track('download-zip');
   await needLib('JSZip');
   const z = new JSZip(); const used = new Set();
   for (const r of results){ let n = r.name, i = 1; while (used.has(n)) n = r.name.replace(/(\.[^.]+)?$/, `-${i++}$1`); used.add(n); z.file(n, r.blob, {date: FIXED_DATE}); }
@@ -1421,6 +1435,8 @@ if (!fromHash()) setMode('images');
 window.addEventListener('hashchange', fromHash);
 </script>
 <!-- Cloudflare Web Analytics: cookieless, anonymous page-view counts -->
+<!-- GoatCounter: cookieless counts of page views and anonymous tool events (never file names or contents) -->
+<script data-goatcounter="https://iacleaner.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa9ba728ece1485f8ff40f3ab5f2eb02"}'></script>
 </body>
 </html>

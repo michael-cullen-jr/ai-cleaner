@@ -1511,6 +1511,7 @@ def page(lang, url, alt, title, desc, body, ld):
 <footer>{t['footer']}</footer>
 <script>document.addEventListener('click', function(e){{ var a = e.target.closest('.lang a'); if (a) try{{ localStorage.setItem('iacleaner-lang', a.dataset.lang); }}catch(_){{}} }});</script>
 <!-- Cloudflare Web Analytics: cookieless, anonymous page-view counts -->
+<script data-goatcounter="https://iacleaner.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "fa9ba728ece1485f8ff40f3ab5f2eb02"}}'></script>
 </body>
 </html>
