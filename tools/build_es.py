@@ -45,20 +45,20 @@ out = attr(out, 'aria', 'aria-label')
 
 # ---- Page-level replacements ----
 ES_HEAD = '''<!-- SEO:START -->
-<title>IA Cleaner — Elimina metadatos de IA de imágenes, PDF y textos (gratis y privado)</title>
-<meta name="description" content="Quita, borra o elimina metadatos online gratis: fotos, vídeos, PDF, Word y textos. Metadatos de IA: C2PA / Content Credentials, EXIF, XMP, prompts en PNG, propiedades de documentos y caracteres ocultos de ChatGPT. Funciona 100 % en tu navegador: no se sube nada.">
+<title>IA Cleaner — Quita los metadatos de fotos, vídeos, PDF y documentos (gratis y privado)</title>
+<meta name="description" content="Quita, borra o elimina metadatos online gratis: ubicación GPS y EXIF de fotos, autor y propiedades de documentos, XMP y etiquetas de IA como C2PA, en fotos, vídeos, PDF y Office. Funciona 100 % en tu navegador: no se sube nada.">
 <link rel="canonical" href="https://iacleaner.com/es/">
 <meta property="og:url" content="https://iacleaner.com/es/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="IA Cleaner — Elimina los metadatos de IA de tus archivos">
-<meta property="og:description" content="Quita C2PA, EXIF, prompts y caracteres ocultos de imágenes, documentos y textos. Gratis y 100 % privado: todo se procesa en tu navegador.">
+<meta property="og:title" content="IA Cleaner — Elimina los datos ocultos de tus archivos">
+<meta property="og:description" content="Quita la ubicación GPS, los datos EXIF, el autor y las etiquetas de IA de fotos, vídeos, PDF y documentos. Gratis y 100 % privado: todo se procesa en tu navegador.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"IA Cleaner","url":"https://iacleaner.com/es/","inLanguage":"es",
  "applicationCategory":"UtilitiesApplication","operatingSystem":"Cualquiera (navegador web)","browserRequirements":"Requiere JavaScript",
  "isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"image":"https://iacleaner.com/logo.webp",
- "description":"Herramienta gratuita que elimina los metadatos relacionados con IA y los caracteres invisibles de imágenes, PDF, documentos de Office y textos, directamente en tu navegador.",
- "featureList":["Eliminar C2PA / Content Credentials","Eliminar metadatos EXIF, XMP e IPTC","Quitar prompts de Stable Diffusion y ComfyUI de PNG","Limpiar propiedades de PDF y documentos de Office","Quitar caracteres ocultos y marcas oaicite de ChatGPT","Procesamiento 100 % en el navegador"]}
+ "description":"Eliminador de metadatos gratuito para fotos, vídeos, PDF, documentos de Office y textos. Quita EXIF y ubicación GPS, datos del autor, XMP y etiquetas de IA como C2PA, directamente en tu navegador.",
+ "featureList":["Quitar EXIF y ubicación GPS de fotos","Quitar metadatos de vídeos MP4 y MOV sin recodificar","Limpiar propiedades de PDF, Word, Excel y PowerPoint","Quitar etiquetas de IA: C2PA / Content Credentials y prompts incrustados","Quitar caracteres ocultos del texto","Ver lo que revela un archivo antes de limpiarlo","Procesamiento 100 % en el navegador"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[

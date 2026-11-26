@@ -13,15 +13,15 @@ T = {
   'en': {'home': '/', 'guides': '/guides/', 'guides_name': 'Guides', 'open': 'Open IA Cleaner', 'files': '/#images',
          'cta_title': 'Clean your files in seconds', 'cta_text': 'Free, no sign-up, and everything runs in your browser — nothing is uploaded.',
          'related': 'More guides', 'updated': 'Updated', 'read': 'min read', 'footer': 'IA Cleaner · Private by design — your files never leave your device.',
-         'idx_title': 'Guides — remove AI metadata and hidden characters | IA Cleaner',
-         'idx_desc': 'Step-by-step guides to remove C2PA, EXIF and PDF metadata and to clean hidden characters from AI-generated text.',
+         'idx_title': 'Guides — remove metadata from photos, videos, documents and AI tags | IA Cleaner',
+         'idx_desc': 'Step-by-step guides to see and remove metadata: GPS and EXIF in photos, video metadata, PDF and Word properties, AI tags like C2PA and hidden characters in text.',
          'idx_h1': 'Guides', 'idx_lead': 'Practical, step-by-step guides about the hidden data inside your files — and how to remove it.',
          'locale': 'en_US'},
   'es': {'home': '/es/', 'guides': '/es/guias/', 'guides_name': 'Guías', 'open': 'Abrir IA Cleaner', 'files': '/es/#images',
          'cta_title': 'Limpia tus archivos en segundos', 'cta_text': 'Gratis, sin registro y todo se procesa en tu navegador: no se sube nada.',
          'related': 'Más guías', 'updated': 'Actualizado', 'read': 'min de lectura', 'footer': 'IA Cleaner · Privado por diseño: tus archivos nunca salen de tu dispositivo.',
-         'idx_title': 'Guías: elimina metadatos de IA y caracteres ocultos | IA Cleaner',
-         'idx_desc': 'Guías paso a paso para quitar metadatos C2PA, EXIF y de PDF, y para limpiar caracteres ocultos de textos generados con IA.',
+         'idx_title': 'Guías: quita los metadatos de fotos, vídeos, documentos y etiquetas de IA | IA Cleaner',
+         'idx_desc': 'Guías paso a paso para ver y quitar metadatos: GPS y EXIF de fotos, metadatos de vídeo, propiedades de PDF y Word, etiquetas de IA como C2PA y caracteres ocultos del texto.',
          'idx_h1': 'Guías', 'idx_lead': 'Guías prácticas, paso a paso, sobre los datos ocultos que llevan tus archivos y cómo eliminarlos.',
          'locale': 'es_ES'},
 }
@@ -1450,6 +1450,9 @@ h1{font-size:clamp(28px,4.5vw,40px);line-height:1.18;letter-spacing:-.03em;margi
 .lead{font-size:18px;color:var(--muted);margin:0 0 10px}
 .quick{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:12px;padding:14px 18px;margin:6px 0 20px;font-size:16.5px;line-height:1.65}
 .quick strong{color:var(--ink)}
+.detects{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:32px 0 0;box-shadow:var(--shadow)}
+.detects h2{font-size:18px;margin:0 0 6px}
+.detects p{margin:0;color:var(--muted);font-size:15px}
 .meta{font-size:13px;color:var(--faint);margin-bottom:26px}
 article h2{font-size:23px;letter-spacing:-.02em;margin:36px 0 10px}
 article li{margin:6px 0}
@@ -1528,6 +1531,26 @@ def quick_box(lang, c):
     label = 'Short answer:' if lang == 'en' else 'Respuesta rápida:'
     return f'<div class="quick"><strong>{label}</strong> {e(c["quick"])}</div>'
 
+DETECTS = {
+ 'en': {'title': 'What IA Cleaner detects and removes',
+        'images': 'In photos (JPG, PNG, WebP) it identifies and removes GPS location, camera and phone model, dates, editing apps, XMP and IPTC data, C2PA Content Credentials and embedded AI prompts. Pixels and colour profile stay the same.',
+        'video': 'In videos (MP4, MOV) it identifies and removes recording location, device and app data, XMP and C2PA Content Credentials, without re-encoding a single frame.',
+        'documents': 'In PDF, Word, Excel and PowerPoint files it identifies and removes author, company, last editor, generating app, template, editing time, XMP and the metadata of embedded images. Your content stays the same.',
+        'text': 'In text it detects and removes invisible characters, special spaces, hidden Unicode messages and chat leftovers such as oaicite markers and utm_source links.',
+        'more': 'You see the full report first — every block found, with AI-related ones flagged — and then download the clean copy.'},
+ 'es': {'title': 'Qué detecta y elimina IA Cleaner',
+        'images': 'En fotos (JPG, PNG, WebP) identifica y elimina la ubicación GPS, el modelo de cámara y de móvil, las fechas, las apps de edición, los datos XMP e IPTC, las Content Credentials (C2PA) y los prompts de IA incrustados. Los píxeles y el perfil de color no cambian.',
+        'video': 'En vídeos (MP4, MOV) identifica y elimina la ubicación de grabación, los datos del dispositivo y de la app, el XMP y las Content Credentials (C2PA), sin volver a codificar ni un fotograma.',
+        'documents': 'En PDF, Word, Excel y PowerPoint identifica y elimina el autor, la empresa, la última persona que lo editó, la aplicación que lo generó, la plantilla, el tiempo de edición, el XMP y los metadatos de las imágenes incrustadas. Tu contenido no cambia.',
+        'text': 'En textos detecta y elimina caracteres invisibles, espacios especiales, mensajes Unicode ocultos y restos de chats como las marcas oaicite y los enlaces utm_source.',
+        'more': 'Primero ves el informe completo, con cada bloque encontrado y los relacionados con IA marcados, y después descargas la copia limpia.'},
+}
+
+def detects_box(lang, kind):
+    d = DETECTS[lang]
+    body = d.get(kind) or d['images']
+    return f'<section class="detects"><h2>{d["title"]}</h2><p>{body} {d["more"]}</p></section>'
+
 def url_of(lang, g):
     return f"{T[lang]['guides']}{g[lang]['slug']}/"
 
@@ -1556,6 +1579,7 @@ for g in GUIDES:
 {cta(lang, c['cta'])}
 {c['body'].strip()}
 {c.get('also', '').strip()}
+{detects_box(lang, c['cta'])}
 {cta(lang, c['cta'])}
 </article>
 <h2>{t['related']}</h2>

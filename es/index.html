@@ -5,20 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- SEO:START -->
-<title>IA Cleaner — Elimina metadatos de IA de imágenes, PDF y textos (gratis y privado)</title>
-<meta name="description" content="Quita, borra o elimina metadatos online gratis: fotos, vídeos, PDF, Word y textos. Metadatos de IA: C2PA / Content Credentials, EXIF, XMP, prompts en PNG, propiedades de documentos y caracteres ocultos de ChatGPT. Funciona 100 % en tu navegador: no se sube nada.">
+<title>IA Cleaner — Quita los metadatos de fotos, vídeos, PDF y documentos (gratis y privado)</title>
+<meta name="description" content="Quita, borra o elimina metadatos online gratis: ubicación GPS y EXIF de fotos, autor y propiedades de documentos, XMP y etiquetas de IA como C2PA, en fotos, vídeos, PDF y Office. Funciona 100 % en tu navegador: no se sube nada.">
 <link rel="canonical" href="https://iacleaner.com/es/">
 <meta property="og:url" content="https://iacleaner.com/es/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="IA Cleaner — Elimina los metadatos de IA de tus archivos">
-<meta property="og:description" content="Quita C2PA, EXIF, prompts y caracteres ocultos de imágenes, documentos y textos. Gratis y 100 % privado: todo se procesa en tu navegador.">
+<meta property="og:title" content="IA Cleaner — Elimina los datos ocultos de tus archivos">
+<meta property="og:description" content="Quita la ubicación GPS, los datos EXIF, el autor y las etiquetas de IA de fotos, vídeos, PDF y documentos. Gratis y 100 % privado: todo se procesa en tu navegador.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"IA Cleaner","url":"https://iacleaner.com/es/","inLanguage":"es",
  "applicationCategory":"UtilitiesApplication","operatingSystem":"Cualquiera (navegador web)","browserRequirements":"Requiere JavaScript",
  "isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"image":"https://iacleaner.com/logo.webp",
- "description":"Herramienta gratuita que elimina los metadatos relacionados con IA y los caracteres invisibles de imágenes, PDF, documentos de Office y textos, directamente en tu navegador.",
- "featureList":["Eliminar C2PA / Content Credentials","Eliminar metadatos EXIF, XMP e IPTC","Quitar prompts de Stable Diffusion y ComfyUI de PNG","Limpiar propiedades de PDF y documentos de Office","Quitar caracteres ocultos y marcas oaicite de ChatGPT","Procesamiento 100 % en el navegador"]}
+ "description":"Eliminador de metadatos gratuito para fotos, vídeos, PDF, documentos de Office y textos. Quita EXIF y ubicación GPS, datos del autor, XMP y etiquetas de IA como C2PA, directamente en tu navegador.",
+ "featureList":["Quitar EXIF y ubicación GPS de fotos","Quitar metadatos de vídeos MP4 y MOV sin recodificar","Limpiar propiedades de PDF, Word, Excel y PowerPoint","Quitar etiquetas de IA: C2PA / Content Credentials y prompts incrustados","Quitar caracteres ocultos del texto","Ver lo que revela un archivo antes de limpiarlo","Procesamiento 100 % en el navegador"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -190,7 +190,15 @@
   .bulk[hidden]{display:none}
 
   /* Info */
-  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:48px}
+  .how{margin-top:52px}
+  .how h2{font-size:24px;letter-spacing:-.02em;margin:0 0 16px;text-align:center}
+  .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+  .steps li{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+  .steps .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:14px;margin-bottom:10px}
+  .steps strong{display:block;font-size:15.5px;margin-bottom:4px}
+  .steps p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55}
+  .feat-title{margin:36px 0 0;font-size:13px;font-weight:700;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;text-align:center}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:14px}
   .feat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
   .feat .fi{width:36px;height:36px;border-radius:10px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;margin-bottom:10px}
   .feat h4{margin:0 0 4px;font-size:14.5px}
@@ -215,8 +223,8 @@
 
 <section class="hero">
   <img class="logo" src="/logo-264.webp" width="132" height="132" alt="IA Cleaner logo">
-  <h1 data-i18n="hero.title">Limpia los <em>rastros de IA</em><br>de tus archivos</h1>
-  <p data-i18n="hero.sub">Elimina los metadatos ocultos y los caracteres invisibles que vinculan tus textos, imágenes y documentos con herramientas de IA.</p>
+  <h1 data-i18n="hero.title">Elimina los <em>datos ocultos</em><br>de tus archivos</h1>
+  <p data-i18n="hero.sub">Fotos, vídeos, PDF y documentos llevan tu ubicación, tu nombre, las apps que usaste y etiquetas de IA. Mira lo que revelan y quítalo con un clic.</p>
   <div class="pill">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
     <span data-i18n="hero.pill">Todo se procesa en tu navegador. No se sube nada.</span>
@@ -225,10 +233,7 @@
 
 <main>
   <div class="seg" role="tablist">
-    <button role="tab" aria-selected="true" data-tab="text">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg><span data-i18n="tab.text">Texto</span>
-    </button>
-    <button role="tab" aria-selected="false" data-tab="files" data-mode="images">
+    <button role="tab" aria-selected="true" data-tab="files" data-mode="images">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg><span data-i18n="tab.images">Imágenes</span>
     </button>
     <button role="tab" aria-selected="false" data-tab="files" data-mode="video">
@@ -237,10 +242,13 @@
     <button role="tab" aria-selected="false" data-tab="files" data-mode="documents">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><span data-i18n="tab.docs">Documentos</span>
     </button>
+    <button role="tab" aria-selected="false" data-tab="text">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg><span data-i18n="tab.text">Texto</span>
+    </button>
   </div>
 
   <!-- ============ TEXT ============ -->
-  <section class="panel active" id="panel-text">
+  <section class="panel" id="panel-text">
     <div class="card">
       <textarea id="txtIn" placeholder="Pega aquí tu texto…" data-i18n-ph="txt.ph" spellcheck="false"></textarea>
       <div class="opts" id="txtOpts"></div>
@@ -269,7 +277,7 @@
   </section>
 
   <!-- ============ FILES ============ -->
-  <section class="panel" id="panel-files">
+  <section class="panel active" id="panel-files">
     <div class="card">
       <div class="drop" id="drop" tabindex="0" role="button" aria-label="Elegir archivos" data-i18n-aria="drop.aria">
         <div class="ico">
@@ -294,7 +302,16 @@
   </section>
 
   <!-- ============ INFO ============ -->
-  <div class="features" id="how">
+  <section class="how" id="how">
+    <h2 data-i18n="how.title">Cómo funciona</h2>
+    <ol class="steps">
+      <li><span class="n">1</span><strong data-i18n="how.s1h">Arrastra tu archivo</strong><p data-i18n="how.s1p">Una foto, un vídeo, un PDF, un Word o un texto. Se lee en tu navegador: no se sube nada.</p></li>
+      <li><span class="n">2</span><strong data-i18n="how.s2h">Mira lo que revela</strong><p data-i18n="how.s2p">IA Cleaner identifica cada bloque de metadatos y te lo explica: ubicación GPS, cámara y móvil, fechas, autor y empresa, apps de edición, historial de ediciones y etiquetas de IA como C2PA. Las relacionadas con IA aparecen marcadas.</p></li>
+      <li><span class="n">3</span><strong data-i18n="how.s3h">Elimínalo y descarga</strong><p data-i18n="how.s3p">Con un clic se elimina todo. Descargas una copia limpia con la misma calidad, y el informe confirma que no queda nada.</p></li>
+    </ol>
+  </section>
+  <h3 class="feat-title" data-i18n="feat.title">Qué detecta en cada archivo</h3>
+  <div class="features">
     <div class="feat">
       <div class="fi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
       <h4 data-i18n="feat.img.h">Imágenes y vídeo</h4>
@@ -319,7 +336,7 @@
   <div class="limits" data-i18n="limits"><b>Lo que no puede eliminar:</b> marcas de agua invisibles incrustadas en los propios píxeles o en el patrón estadístico de las palabras (p. ej. SynthID). Eso no son metadatos: forma parte del contenido.</div>
   <section class="guides" id="guides">
     <h2 data-i18n="guides.title">Guías</h2>
-    <div class="guide-cards" data-i18n="guides.list"><a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/metadatos-documentos-presentaciones-claude/"><strong>Documentos y presentaciones de Claude</strong><span>Los nombres de librerías y fechas que dejan en Word, PowerPoint y PDF.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a><a href="/es/guias/quitar-metadatos-video/"><strong>Quitar metadatos de un vídeo</strong><span>GPS, datos del móvil y Content Credentials en MP4 y MOV, sin recodificar.</span></a><a href="/es/guias/etiqueta-ia-samsung-galaxy/"><strong>Etiqueta de IA en Samsung Galaxy</strong><span>La marca visible y los metadatos de IA: qué es cada uno y qué puedes quitar.</span></a><a href="/es/guias/etiqueta-ia-facebook-x-linkedin/"><strong>Etiquetas de IA en Facebook, LinkedIn, X y YouTube</strong><span>Por qué aparecen y qué revisar antes de publicar.</span></a><a href="/es/guias/quitar-marca-de-agua-ia/"><strong>Marcas de agua de IA: qué se puede quitar</strong><span>C2PA, SynthID y texto de ChatGPT, explicado con honestidad.</span></a><a href="/es/guias/metadatos-fotos-whatsapp/"><strong>¿WhatsApp borra los metadatos?</strong><span>Foto o documento, y cómo enviar una copia limpia.</span></a><a href="/es/guias/ver-metadatos-online/"><strong>Ver metadatos online</strong><span>Mira lo que revela una foto, un PDF o un vídeo antes de compartirlo.</span></a></div>
+    <div class="guide-cards" data-i18n="guides.list"><a href="/es/guias/ver-metadatos-online/"><strong>Ver metadatos online</strong><span>Mira lo que revela una foto, un PDF o un vídeo antes de compartirlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-video/"><strong>Quitar metadatos de un vídeo</strong><span>GPS, datos del móvil y Content Credentials en MP4 y MOV, sin recodificar.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a><a href="/es/guias/metadatos-fotos-whatsapp/"><strong>¿WhatsApp borra los metadatos?</strong><span>Foto o documento, y cómo enviar una copia limpia.</span></a><a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/etiqueta-ia-samsung-galaxy/"><strong>Etiqueta de IA en Samsung Galaxy</strong><span>La marca visible y los metadatos de IA: qué es cada uno y qué puedes quitar.</span></a><a href="/es/guias/etiqueta-ia-facebook-x-linkedin/"><strong>Etiquetas de IA en Facebook, LinkedIn, X y YouTube</strong><span>Por qué aparecen y qué revisar antes de publicar.</span></a><a href="/es/guias/quitar-marca-de-agua-ia/"><strong>Marcas de agua de IA: qué se puede quitar</strong><span>C2PA, SynthID y texto de ChatGPT, explicado con honestidad.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/metadatos-documentos-presentaciones-claude/"><strong>Documentos y presentaciones de Claude</strong><span>Los nombres de librerías y fechas que dejan en Word, PowerPoint y PDF.</span></a></div>
   </section>
   <section class="faq" id="faq">
     <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
@@ -342,8 +359,13 @@ let LANG = 'en';
 /* Static page blocks (key → Spanish HTML). English comes from the page itself. */
 const UI_ES = {
   'nav.how': 'Cómo funciona',
-  'hero.title': 'Limpia los <em>rastros de IA</em><br>de tus archivos',
-  'hero.sub': 'Elimina los metadatos ocultos y los caracteres invisibles que vinculan tus textos, imágenes y documentos con herramientas de IA.',
+  'how.title': 'Cómo funciona',
+  'how.s1h': 'Arrastra tu archivo', 'how.s1p': 'Una foto, un vídeo, un PDF, un Word o un texto. Se lee en tu navegador: no se sube nada.',
+  'how.s2h': 'Mira lo que revela', 'how.s2p': 'IA Cleaner identifica cada bloque de metadatos y te lo explica: ubicación GPS, cámara y móvil, fechas, autor y empresa, apps de edición, historial de ediciones y etiquetas de IA como C2PA. Las relacionadas con IA aparecen marcadas.',
+  'how.s3h': 'Elimínalo y descarga', 'how.s3p': 'Con un clic se elimina todo. Descargas una copia limpia con la misma calidad, y el informe confirma que no queda nada.',
+  'feat.title': 'Qué detecta en cada archivo',
+  'hero.title': 'Elimina los <em>datos ocultos</em><br>de tus archivos',
+  'hero.sub': 'Fotos, vídeos, PDF y documentos llevan tu ubicación, tu nombre, las apps que usaste y etiquetas de IA. Mira lo que revelan y quítalo con un clic.',
   'hero.pill': 'Todo se procesa en tu navegador. No se sube nada.',
   'tab.text': 'Texto',
   'tab.images': 'Imágenes', 'tab.video': 'Vídeo', 'tab.docs': 'Documentos',
@@ -371,7 +393,7 @@ const UI_ES = {
   'footer': 'IA Cleaner · Privado por diseño: tus archivos nunca salen de tu dispositivo.',
   'nav.guides': '<a class="link" href="/es/guias/">Guías</a>',
   'guides.title': 'Guías',
-  'guides.list': '<a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/metadatos-documentos-presentaciones-claude/"><strong>Documentos y presentaciones de Claude</strong><span>Los nombres de librerías y fechas que dejan en Word, PowerPoint y PDF.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a><a href="/es/guias/quitar-metadatos-video/"><strong>Quitar metadatos de un vídeo</strong><span>GPS, datos del móvil y Content Credentials en MP4 y MOV, sin recodificar.</span></a><a href="/es/guias/etiqueta-ia-samsung-galaxy/"><strong>Etiqueta de IA en Samsung Galaxy</strong><span>La marca visible y los metadatos de IA: qué es cada uno y qué puedes quitar.</span></a><a href="/es/guias/etiqueta-ia-facebook-x-linkedin/"><strong>Etiquetas de IA en Facebook, LinkedIn, X y YouTube</strong><span>Por qué aparecen y qué revisar antes de publicar.</span></a><a href="/es/guias/quitar-marca-de-agua-ia/"><strong>Marcas de agua de IA: qué se puede quitar</strong><span>C2PA, SynthID y texto de ChatGPT, explicado con honestidad.</span></a><a href="/es/guias/metadatos-fotos-whatsapp/"><strong>¿WhatsApp borra los metadatos?</strong><span>Foto o documento, y cómo enviar una copia limpia.</span></a><a href="/es/guias/ver-metadatos-online/"><strong>Ver metadatos online</strong><span>Mira lo que revela una foto, un PDF o un vídeo antes de compartirlo.</span></a>',
+  'guides.list': '<a href="/es/guias/ver-metadatos-online/"><strong>Ver metadatos online</strong><span>Mira lo que revela una foto, un PDF o un vídeo antes de compartirlo.</span></a><a href="/es/guias/quitar-metadatos-foto-movil/"><strong>Metadatos de fotos en iPhone y Android</strong><span>Quita la ubicación GPS, los datos del móvil y las ediciones con IA desde el navegador.</span></a><a href="/es/guias/quitar-metadatos-video/"><strong>Quitar metadatos de un vídeo</strong><span>GPS, datos del móvil y Content Credentials en MP4 y MOV, sin recodificar.</span></a><a href="/es/guias/borrar-metadatos-pdf/"><strong>Borrar los metadatos de un PDF</strong><span>Autor, aplicación, fechas y XMP: mira qué contiene y elimínalo.</span></a><a href="/es/guias/quitar-metadatos-word/"><strong>Quitar los metadatos de un Word</strong><span>Autor, empresa, tiempo de edición y plantilla en archivos .docx.</span></a><a href="/es/guias/metadatos-fotos-whatsapp/"><strong>¿WhatsApp borra los metadatos?</strong><span>Foto o documento, y cómo enviar una copia limpia.</span></a><a href="/es/guias/etiqueta-ia-instagram/"><strong>Etiqueta «Información de IA» de Instagram</strong><span>Por qué sale en tu foto y cómo quitar los metadatos que la activan.</span></a><a href="/es/guias/etiqueta-ia-tiktok/"><strong>Etiqueta «Generado por IA» de TikTok</strong><span>Cómo lee TikTok el C2PA de tus fotos y vídeos, y cómo limpiarlos antes de publicar.</span></a><a href="/es/guias/quitar-c2pa-content-credentials/"><strong>Quitar C2PA / Content Credentials</strong><span>Qué es el registro de procedencia de la IA y cómo quitarlo de tus imágenes.</span></a><a href="/es/guias/photoshop-content-credentials-historial/"><strong>Content Credentials de Photoshop</strong><span>Lo que tu exportación revela sobre tus ediciones y cómo quitarlo.</span></a><a href="/es/guias/saber-si-imagen-es-ia-metadatos/"><strong>¿Esta imagen es de IA? Mira sus metadatos</strong><span>C2PA, XMP y prompts que delatan la herramienta de IA, y lo que los metadatos no dicen.</span></a><a href="/es/guias/metadatos-imagenes-chatgpt/"><strong>Metadatos de las imágenes de ChatGPT</strong><span>El registro C2PA que OpenAI añade a cada imagen y cómo quitarlo.</span></a><a href="/es/guias/etiqueta-ia-samsung-galaxy/"><strong>Etiqueta de IA en Samsung Galaxy</strong><span>La marca visible y los metadatos de IA: qué es cada uno y qué puedes quitar.</span></a><a href="/es/guias/etiqueta-ia-facebook-x-linkedin/"><strong>Etiquetas de IA en Facebook, LinkedIn, X y YouTube</strong><span>Por qué aparecen y qué revisar antes de publicar.</span></a><a href="/es/guias/quitar-marca-de-agua-ia/"><strong>Marcas de agua de IA: qué se puede quitar</strong><span>C2PA, SynthID y texto de ChatGPT, explicado con honestidad.</span></a><a href="/es/guias/caracteres-ocultos-chatgpt/"><strong>Caracteres ocultos de ChatGPT</strong><span>Caracteres invisibles, marcas oaicite y enlaces utm_source: cómo limpiarlos.</span></a><a href="/es/guias/quitar-rastros-ia-documentos-correos/"><strong>Rastros de IA en documentos y correos</strong><span>Metadatos, imágenes de IA incrustadas y restos de copiar y pegar en Word, PDF y correos.</span></a><a href="/es/guias/metadatos-documentos-presentaciones-claude/"><strong>Documentos y presentaciones de Claude</strong><span>Los nombres de librerías y fechas que dejan en Word, PowerPoint y PDF.</span></a>',
   'faq.title': 'Preguntas frecuentes',
   'faq.q1': '¿Se suben mis archivos a algún sitio?',
   'faq.a1': 'No. IA Cleaner funciona por completo en tu navegador con JavaScript. Tus textos, imágenes y documentos nunca salen de tu dispositivo, y la página sigue funcionando aunque te desconectes después de cargarla. Solo contamos visitas anónimas (Cloudflare Web Analytics y GoatCounter, ambos sin cookies) y eventos anónimos como «se limpió una imagen» o «se pulsó descargar». Nunca se envían nombres ni contenidos de archivos.',
